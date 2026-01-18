@@ -4,7 +4,9 @@ import { createTemplateSignal } from '@tanstack/solid-template'
 import { TemplateDevtools } from '@tanstack/solid-template-devtools'
 
 function App() {
-  const template = createTemplate({ message: 'Hello from Solid with Devtools!' })
+  const template = createTemplate({
+    message: 'Hello from Solid with Devtools!',
+  })
   const state = createTemplateSignal(template)
 
   return (

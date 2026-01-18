@@ -6,46 +6,53 @@ This template provides a complete TanStack library setup. Follow these steps to 
 
 Replace the following strings throughout the codebase:
 
-| Find | Replace With | Example |
-|------|-------------|---------|
+| Find       | Replace With        | Example                                          |
+| ---------- | ------------------- | ------------------------------------------------ |
 | `template` | `your-library-name` | @tanstack/template → @tanstack/your-library-name |
-| `Template` | `YourLibraryName` | class Template → class YourLibraryName |
-| `TEMPLATE` | `YOUR_LIBRARY_NAME` | TEMPLATE_VAR → YOUR_LIBRARY_NAME_VAR |
+| `Template` | `YourLibraryName`   | class Template → class YourLibraryName           |
+| `TEMPLATE` | `YOUR_LIBRARY_NAME` | TEMPLATE_VAR → YOUR_LIBRARY_NAME_VAR             |
 
 ## Files to Update
 
 ### 1. Root package.json
+
 - Update repository URL
 - Update homepage URL
 - Update description
 - Update overrides section with your package names
 
 ### 2. Package package.json files
+
 - Update name, description, keywords
 - Update repository directory paths
 
 ### 3. Documentation
+
 - Update docs/overview.md with your library's purpose
 - Update docs/quick-start.md with real usage examples
 - Add guides for your library's features
 - Update config.json with your DocSearch credentials
 
 ### 4. GitHub Configuration
+
 - Update .github/ISSUE_TEMPLATE/bug_report.yml
 - Update workflow files if needed
 - Update FUNDING.yml with your sponsor links
 
 ### 5. Source Code
+
 - Replace placeholder console.log code with your library's implementation
 - Update types in src/types.ts
 - Write real tests
 - Add framework-specific implementations
 
 ### 6. Examples
+
 - Update example apps to demonstrate your library
 - Add more examples as needed
 
 ### 7. README.md
+
 - Write comprehensive README describing your library
 - Add badges, installation instructions, usage examples
 
