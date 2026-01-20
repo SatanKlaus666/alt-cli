@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "mcp": "npx tsx src/mcp/index.ts"
+  }
+}

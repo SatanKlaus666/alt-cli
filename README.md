@@ -1,55 +1,48 @@
-# TanStack Template
+# TanStack CLI
 
-A complete template for creating new TanStack libraries with all the tooling and infrastructure you need.
+CLI for scaffolding TanStack Start projects with integrations.
 
-## What's Included
-
-- ✅ Framework-agnostic core package
-- ✅ React and Solid adapters (easy to add more)
-- ✅ Devtools packages for debugging
-- ✅ Full monorepo setup with pnpm + Nx
-- ✅ TypeScript configuration
-- ✅ Testing setup with Vitest
-- ✅ Documentation structure with TypeDoc
-- ✅ Example applications
-- ✅ GitHub workflows (CI, release, autofix)
-- ✅ Changesets for versioning
-- ✅ ESLint + Prettier
-- ✅ Issue and PR templates
-
-## Getting Started
-
-1. Clone or copy this template
-2. Follow the instructions in TEMPLATE_GUIDE.md
-3. Search and replace "template" with your library name
-4. Replace placeholder code with your implementation
-5. Update documentation
-6. Start building!
-
-## Package Structure
-
-- `@tanstack/template` - Core library
-- `@tanstack/react-template` - React adapter
-- `@tanstack/solid-template` - Solid adapter
-- `@tanstack/template-devtools` - Base devtools
-- `@tanstack/react-template-devtools` - React devtools
-- `@tanstack/solid-template-devtools` - Solid devtools
-
-## Commands
+## Quick Start
 
 ```bash
-pnpm install          # Install dependencies
-pnpm build:all        # Build all packages
-pnpm test:lib         # Run tests
-pnpm test:pr          # Run PR checks
-pnpm format           # Format code
-pnpm generate-docs    # Generate documentation
-pnpm watch            # Watch mode
+# Create a new project
+npx @tanstack/cli create my-app
+
+# Or with integrations
+npx @tanstack/cli create my-app --integrations tanstack-query,clerk,drizzle
 ```
+
+## Features
+
+- **Interactive scaffolding** - Guided project creation with prompts
+- **30+ integrations** - Auth, database, deployment, and more
+- **Custom templates** - Create and share project presets
+- **MCP server** - AI agent support for Claude and others
 
 ## Documentation
 
-See TEMPLATE_GUIDE.md for detailed instructions on customizing this template.
+- [Overview](./docs/overview.md)
+- [CLI Reference](./docs/cli-reference.md)
+- [Available Integrations](./docs/integrations.md)
+- [Custom Templates](./docs/templates.md)
+- [Creating Integrations](./docs/creating-integrations.md)
+- [MCP Server](./docs/mcp/overview.md)
+- [Contributing](./CONTRIBUTING.md)
+
+## Integrations
+
+| Category | Integrations |
+|----------|-------------|
+| TanStack | Query, Form, Table, Store, Virtual, AI, DB, Pacer |
+| Auth | Clerk, Better Auth, WorkOS |
+| Database | Neon, Convex |
+| ORM | Drizzle, Prisma |
+| Deployment | Vercel, Netlify, Cloudflare, Nitro |
+| Tooling | ESLint, Biome, shadcn/ui, Storybook |
+| API | tRPC, oRPC |
+| Monitoring | Sentry |
+| i18n | Paraglide |
+| CMS | Strapi |
 
 ## License
 

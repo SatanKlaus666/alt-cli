@@ -1,0 +1,53 @@
+{
+  "name": "Drizzle ORM",
+  "description": "TypeScript ORM with maximum type safety and great DX",
+  "type": "integration",
+  "phase": "integration",
+  "category": "orm",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://orm.drizzle.team",
+  "smallLogo": "logos/drizzle.svg",
+
+  "dependsOn": [],
+  "conflicts": ["prisma", "convex"],
+
+  "options": {
+    "database": {
+      "type": "select",
+      "label": "Database",
+      "description": "Choose your database provider",
+      "default": "postgresql",
+      "options": [
+        { "value": "postgresql", "label": "PostgreSQL" },
+        { "value": "mysql", "label": "MySQL" },
+        { "value": "sqlite", "label": "SQLite" }
+      ]
+    }
+  },
+
+  "routes": [
+    {
+      "url": "/demo/drizzle",
+      "name": "Drizzle ORM",
+      "icon": "Database",
+      "path": "src/routes/demo/drizzle.tsx",
+      "jsName": "DrizzleDemo"
+    }
+  ],
+
+  "hooks": [],
+
+  "envVars": [
+    {
+      "name": "DATABASE_URL",
+      "description": "Connection string for your database",
+      "required": true,
+      "example": "postgresql://user:password@localhost:5432/mydb"
+    }
+  ],
+
+  "gitignorePatterns": [
+    "drizzle/"
+  ]
+}

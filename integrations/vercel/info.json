@@ -1,0 +1,17 @@
+{
+  "name": "Vercel",
+  "description": "Deploy to Vercel",
+  "type": "deployment",
+  "phase": "integration",
+  "category": "deploy",
+  "modes": ["file-router", "code-router"],
+  "priority": 10,
+  "link": "https://vercel.com/docs",
+  "smallLogo": "logos/vercel.svg",
+  "partnerId": "vercel",
+
+  "dependsOn": [],
+  "conflicts": ["netlify", "cloudflare", "nitro"],
+
+  "envVars": []
+}

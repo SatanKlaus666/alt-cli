@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "prisma": "^7.2.0",
+    "@prisma/client": "^7.2.0",
+    "@prisma/adapter-pg": "^7.2.0"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^10.0.0",
+    "tsx": "^4.20.6"
+  },
+  "scripts": {
+    "db:generate": "dotenv -e .env.local -- prisma generate",
+    "db:push": "dotenv -e .env.local -- prisma db push",
+    "db:migrate": "dotenv -e .env.local -- prisma migrate dev",
+    "db:studio": "dotenv -e .env.local -- prisma studio",
+    "db:seed": "dotenv -e .env.local -- prisma db seed"
+  }
+}

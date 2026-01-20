@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@tanstack/db": "^0.0.1",
+    "@tanstack/react-db": "^0.0.1"
+  }
+}

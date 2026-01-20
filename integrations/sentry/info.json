@@ -1,0 +1,61 @@
+{
+  "name": "Sentry",
+  "description": "Error tracking and performance monitoring for production apps",
+  "type": "integration",
+  "phase": "integration",
+  "category": "monitoring",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://sentry.io",
+  "smallLogo": "logos/sentry.svg",
+  "partnerId": "sentry",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [],
+
+  "hooks": [
+    {
+      "type": "vite-plugin",
+      "jsName": "sentryPlugin",
+      "path": "src/integrations/sentry/vite-plugin.ts"
+    },
+    {
+      "type": "entry-client",
+      "jsName": "initSentry",
+      "path": "src/integrations/sentry/client.ts"
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "SENTRY_DSN",
+      "description": "Your Sentry DSN for error tracking",
+      "required": true,
+      "example": "https://xxx@xxx.ingest.sentry.io/xxx"
+    },
+    {
+      "name": "SENTRY_AUTH_TOKEN",
+      "description": "Sentry auth token for source map uploads (build time)",
+      "required": false,
+      "example": "sntrys_xxx"
+    },
+    {
+      "name": "SENTRY_ORG",
+      "description": "Your Sentry organization slug",
+      "required": false,
+      "example": "my-org"
+    },
+    {
+      "name": "SENTRY_PROJECT",
+      "description": "Your Sentry project slug",
+      "required": false,
+      "example": "my-project"
+    }
+  ],
+
+  "gitignorePatterns": [
+    ".sentryclirc"
+  ]
+}

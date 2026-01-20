@@ -1,0 +1,31 @@
+{
+  "name": "create-tanstack-app",
+  "version": "0.0.1",
+  "description": "Create TanStack applications with ease",
+  "author": "Tanner Linsley",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TanStack/cli.git",
+    "directory": "packages/create-tanstack-app"
+  },
+  "homepage": "https://tanstack.com",
+  "keywords": [
+    "tanstack",
+    "create",
+    "scaffold",
+    "start",
+    "react",
+    "router"
+  ],
+  "type": "module",
+  "bin": {
+    "create-tanstack-app": "./bin.mjs"
+  },
+  "files": [
+    "bin.mjs"
+  ],
+  "dependencies": {
+    "@tanstack/cli": "workspace:*"
+  }
+}

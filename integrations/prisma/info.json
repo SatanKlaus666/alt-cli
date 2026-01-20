@@ -1,0 +1,54 @@
+{
+  "name": "Prisma",
+  "description": "Next-generation Node.js and TypeScript ORM",
+  "type": "integration",
+  "phase": "integration",
+  "category": "orm",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://www.prisma.io",
+  "smallLogo": "logos/prisma.svg",
+  "partnerId": "prisma",
+
+  "dependsOn": [],
+  "conflicts": ["drizzle", "convex"],
+
+  "options": {
+    "database": {
+      "type": "select",
+      "label": "Database",
+      "description": "Choose your database provider",
+      "default": "postgres",
+      "options": [
+        { "value": "postgres", "label": "PostgreSQL" },
+        { "value": "mysql", "label": "MySQL" },
+        { "value": "sqlite", "label": "SQLite" }
+      ]
+    }
+  },
+
+  "routes": [
+    {
+      "url": "/demo/prisma",
+      "name": "Prisma",
+      "icon": "Database",
+      "path": "src/routes/demo/prisma.tsx",
+      "jsName": "PrismaDemo"
+    }
+  ],
+
+  "hooks": [],
+
+  "envVars": [
+    {
+      "name": "DATABASE_URL",
+      "description": "Connection string for your database",
+      "required": true,
+      "example": "postgresql://user:password@localhost:5432/mydb"
+    }
+  ],
+
+  "gitignorePatterns": [
+    "prisma/migrations/"
+  ]
+}

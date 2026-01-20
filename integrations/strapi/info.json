@@ -1,0 +1,38 @@
+{
+  "name": "Strapi",
+  "description": "Open-source headless CMS with TypeScript support",
+  "type": "integration",
+  "phase": "integration",
+  "category": "cms",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://strapi.io",
+  "smallLogo": "logos/strapi.svg",
+  "partnerId": "strapi",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "options": {},
+
+  "routes": [
+    {
+      "url": "/demo/strapi",
+      "name": "Strapi",
+      "icon": "FileText",
+      "path": "src/routes/demo/strapi.tsx",
+      "jsName": "StrapiDemo"
+    }
+  ],
+
+  "hooks": [],
+
+  "envVars": [
+    {
+      "name": "VITE_STRAPI_URL",
+      "description": "Strapi API URL",
+      "required": true,
+      "example": "http://localhost:1337/api"
+    }
+  ]
+}

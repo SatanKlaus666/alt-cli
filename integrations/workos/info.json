@@ -1,0 +1,53 @@
+{
+  "name": "WorkOS",
+  "description": "Enterprise-ready authentication with WorkOS AuthKit",
+  "type": "integration",
+  "phase": "integration",
+  "category": "auth",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://workos.com",
+  "smallLogo": "logos/workos.svg",
+  "partnerId": "workos",
+
+  "dependsOn": [],
+  "conflicts": ["clerk", "better-auth"],
+
+  "routes": [
+    {
+      "url": "/demo/workos",
+      "name": "WorkOS Auth",
+      "icon": "CircleUserRound",
+      "path": "src/routes/demo/workos.tsx",
+      "jsName": "WorkOSDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "root-provider",
+      "jsName": "WorkOSProvider",
+      "path": "src/integrations/workos/provider.tsx"
+    },
+    {
+      "type": "header-user",
+      "jsName": "WorkOSUser",
+      "path": "src/components/workos-user.tsx"
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "VITE_WORKOS_CLIENT_ID",
+      "description": "WorkOS Client ID from dashboard",
+      "required": true,
+      "example": "client_01ABC..."
+    },
+    {
+      "name": "VITE_WORKOS_API_HOSTNAME",
+      "description": "WorkOS API hostname",
+      "required": false,
+      "example": "api.workos.com"
+    }
+  ]
+}

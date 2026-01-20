@@ -1,0 +1,26 @@
+{
+  "name": "Nitro",
+  "description": "Deploy anywhere with Nitro 3 universal server engine",
+  "type": "deployment",
+  "phase": "integration",
+  "category": "deploy",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://nitro.build",
+  "smallLogo": "logos/nitro.svg",
+
+  "dependsOn": [],
+  "conflicts": ["netlify", "cloudflare"],
+
+  "routes": [],
+
+  "hooks": [
+    {
+      "type": "vite-plugin",
+      "jsName": "nitro",
+      "path": "src/integrations/nitro/vite-plugin.ts"
+    }
+  ],
+
+  "envVars": []
+}

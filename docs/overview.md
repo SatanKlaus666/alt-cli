@@ -1,26 +1,21 @@
-# TanStack Template
+---
+id: overview
+title: Overview
+---
 
-This is a template for creating new TanStack libraries.
+Scaffold TanStack Start projects with integrations for auth, databases, deployment, and more.
 
-## What's Included
-
-- Framework-agnostic core package
-- React and Solid adapters
-- Devtools packages
-- Full tooling setup (Nx, changesets, TypeScript, etc.)
-- Documentation structure
-- Example applications
-
-## How to Use This Template
-
-See the TEMPLATE_GUIDE.md in the root directory for instructions on customizing this template for your new library.
+```bash
+npx @tanstack/cli create my-app
+```
 
 ## Features
 
-- **Framework Agnostic**: Core logic works everywhere
-- **Framework Adapters**: Pre-built React and Solid integrations
-- **TypeScript**: Full type safety
-- **Testing**: Vitest setup with example tests
-- **Documentation**: Auto-generated API docs with TypeDoc
-- **Examples**: Working examples for each framework
-- **CI/CD**: GitHub Actions workflows ready to go
+- **Integrations** - Auth, database, deployment, monitoring ([full list](./integrations.md))
+- **Templates** - Reusable project presets ([docs](./templates.md))
+- **MCP Server** - AI agent support ([docs](./mcp/overview.md))
+
+## Next Steps
+
+- [Quick Start](./quick-start.md) - Create your first project
+- [CLI Reference](./cli-reference.md) - All commands and options

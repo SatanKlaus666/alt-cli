@@ -1,0 +1,12 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "@tanstack/eslint-config": "^0.3.0",
+    "prettier": "^3.5.3"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "format": "prettier",
+    "check": "prettier --write . && eslint --fix"
+  }
+}

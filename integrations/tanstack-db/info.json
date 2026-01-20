@@ -1,0 +1,32 @@
+{
+  "name": "TanStack DB",
+  "description": "Reactive client-side database with automatic syncing and persistence",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://tanstack.com/db",
+  "smallLogo": "logos/db.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/db",
+      "name": "TanStack DB",
+      "icon": "Database",
+      "path": "src/routes/demo/db.tsx",
+      "jsName": "DbDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "devtools",
+      "jsName": "dbDevtoolsPlugin",
+      "path": "src/integrations/db/devtools.tsx"
+    }
+  ]
+}

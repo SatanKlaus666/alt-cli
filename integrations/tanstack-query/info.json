@@ -1,0 +1,37 @@
+{
+  "name": "TanStack Query",
+  "description": "Powerful asynchronous state management for data fetching, caching, and synchronization",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 25,
+  "link": "https://tanstack.com/query",
+  "smallLogo": "logos/query.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/query",
+      "name": "TanStack Query",
+      "icon": "Database",
+      "path": "src/routes/demo/query.tsx",
+      "jsName": "QueryDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "root-provider",
+      "jsName": "QueryProvider",
+      "path": "src/integrations/query/provider.tsx"
+    },
+    {
+      "type": "devtools",
+      "jsName": "queryDevtoolsPlugin",
+      "path": "src/integrations/query/devtools.tsx"
+    }
+  ]
+}

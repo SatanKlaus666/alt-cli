@@ -1,0 +1,16 @@
+{
+  "name": "MCP Server",
+  "description": "Add a Model Context Protocol server for AI agent integration",
+  "type": "integration",
+  "phase": "integration",
+  "category": "other",
+  "modes": ["file-router"],
+  "priority": 0,
+  "link": "https://modelcontextprotocol.io",
+  "smallLogo": "logos/mcp.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "hooks": []
+}

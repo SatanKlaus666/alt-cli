@@ -1,0 +1,613 @@
+{
+  "version": "0.0.1",
+  "generated": "2025-01-19T00:00:00Z",
+  "integrations": [
+    {
+      "id": "tanstack-query",
+      "name": "TanStack Query",
+      "description": "Powerful asynchronous state management for data fetching, caching, and synchronization",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/query",
+      "color": "#EF4444",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "tanstack-form",
+      "name": "TanStack Form",
+      "description": "Headless, type-safe form state management with first-class TypeScript support",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/form",
+      "color": "#EAB308",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "tanstack-table",
+      "name": "TanStack Table",
+      "description": "Headless UI for building powerful tables with sorting, filtering, and pagination",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/table",
+      "color": "#3B82F6",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "tanstack-store",
+      "name": "TanStack Store",
+      "description": "Framework-agnostic type-safe state management with React bindings",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/store",
+      "color": "#B45309",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "ai",
+      "name": "TanStack AI",
+      "description": "Build AI-powered chat and completion features with TanStack AI",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/ai",
+      "color": "#EC4899",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "tanstack-db",
+      "name": "TanStack DB",
+      "description": "Reactive client-side database with automatic syncing and persistence",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/db",
+      "color": "#F97316",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "tanstack-pacer",
+      "name": "TanStack Pacer",
+      "description": "Rate limiting utilities with debounce, throttle, and async queue management",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/pacer",
+      "color": "#84CC16",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "tanstack-virtual",
+      "name": "TanStack Virtual",
+      "description": "Headless virtualization for efficiently rendering massive lists and grids",
+      "type": "integration",
+      "category": "tanstack",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://tanstack.com/virtual",
+      "color": "#A855F7",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "drizzle",
+      "name": "Drizzle ORM",
+      "description": "TypeScript ORM with maximum type safety and great DX",
+      "type": "integration",
+      "category": "orm",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "prisma",
+        "convex"
+      ],
+      "hasOptions": true,
+      "link": "https://orm.drizzle.team",
+      "color": "#c5f74f",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "prisma",
+      "name": "Prisma",
+      "description": "Next-generation Node.js and TypeScript ORM",
+      "type": "integration",
+      "category": "orm",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "drizzle",
+        "convex"
+      ],
+      "partnerId": "prisma",
+      "hasOptions": true,
+      "link": "https://prisma.io",
+      "color": "#2d3748",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "convex",
+      "name": "Convex",
+      "description": "The fullstack TypeScript development platform with realtime sync",
+      "type": "integration",
+      "category": "database",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "drizzle",
+        "prisma",
+        "neon"
+      ],
+      "partnerId": "convex",
+      "hasOptions": false,
+      "link": "https://convex.dev",
+      "color": "#ee342f",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "neon",
+      "name": "Neon",
+      "description": "Serverless Postgres with branching, autoscaling, and bottomless storage",
+      "type": "integration",
+      "category": "database",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "partnerId": "neon",
+      "hasOptions": false,
+      "link": "https://neon.tech",
+      "color": "#00e5bf",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "clerk",
+      "name": "Clerk",
+      "description": "Complete user management with pre-built components and APIs",
+      "type": "integration",
+      "category": "auth",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "better-auth",
+        "workos"
+      ],
+      "partnerId": "clerk",
+      "hasOptions": false,
+      "link": "https://clerk.com",
+      "color": "#6c47ff",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "better-auth",
+      "name": "Better Auth",
+      "description": "Simple, secure authentication for modern applications",
+      "type": "integration",
+      "category": "auth",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "clerk",
+        "workos"
+      ],
+      "hasOptions": false,
+      "link": "https://better-auth.com",
+      "color": "#f97316",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "workos",
+      "name": "WorkOS",
+      "description": "Enterprise-ready authentication with SSO, SCIM, and audit logs",
+      "type": "integration",
+      "category": "auth",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "clerk",
+        "better-auth"
+      ],
+      "partnerId": "workos",
+      "hasOptions": false,
+      "link": "https://workos.com",
+      "color": "#6366f1",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "netlify",
+      "name": "Netlify",
+      "description": "Deploy to Netlify with automatic builds and edge functions",
+      "type": "deployment",
+      "category": "deploy",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "cloudflare",
+        "nitro"
+      ],
+      "partnerId": "netlify",
+      "hasOptions": false,
+      "link": "https://netlify.com",
+      "color": "#00c7b7"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "description": "Deploy to Cloudflare with Workers and global edge network",
+      "type": "deployment",
+      "category": "deploy",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "netlify",
+        "nitro"
+      ],
+      "partnerId": "cloudflare",
+      "hasOptions": false,
+      "link": "https://pages.cloudflare.com",
+      "color": "#f38020"
+    },
+    {
+      "id": "nitro",
+      "name": "Nitro",
+      "description": "Deploy anywhere with Nitro 3 universal server engine",
+      "type": "deployment",
+      "category": "deploy",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "netlify",
+        "cloudflare"
+      ],
+      "hasOptions": false,
+      "link": "https://nitro.build",
+      "color": "#FACC15"
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn/ui",
+      "description": "Beautifully designed components built with Radix UI and Tailwind CSS",
+      "type": "integration",
+      "category": "tooling",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://ui.shadcn.com",
+      "color": "#18181b",
+      "requiresTailwind": true
+    },
+    {
+      "id": "biome",
+      "name": "Biome",
+      "description": "Fast formatter and linter for JavaScript, TypeScript, and more",
+      "type": "toolchain",
+      "category": "tooling",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "eslint"
+      ],
+      "hasOptions": false,
+      "link": "https://biomejs.dev",
+      "color": "#60a5fa"
+    },
+    {
+      "id": "eslint",
+      "name": "ESLint + Prettier",
+      "description": "Industry-standard linting and formatting for JavaScript and TypeScript",
+      "type": "toolchain",
+      "category": "tooling",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [
+        "biome"
+      ],
+      "hasOptions": false,
+      "link": "https://eslint.org",
+      "color": "#4b32c3"
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "description": "Application monitoring and error tracking",
+      "type": "integration",
+      "category": "monitoring",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "partnerId": "sentry",
+      "hasOptions": false,
+      "link": "https://sentry.io",
+      "color": "#362d59",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "storybook",
+      "name": "Storybook",
+      "description": "Build and test UI components in isolation",
+      "type": "integration",
+      "category": "tooling",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://storybook.js.org",
+      "color": "#ff4785",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "trpc",
+      "name": "tRPC",
+      "description": "End-to-end typesafe APIs with automatic type inference",
+      "type": "integration",
+      "category": "api",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [
+        "tanstack-query"
+      ],
+      "conflicts": [
+        "orpc"
+      ],
+      "hasOptions": false,
+      "link": "https://trpc.io",
+      "color": "#2596be",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "orpc",
+      "name": "oRPC",
+      "description": "Type-safe RPC with OpenAPI support and TanStack Query integration",
+      "type": "integration",
+      "category": "api",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [
+        "tanstack-query"
+      ],
+      "conflicts": [
+        "trpc"
+      ],
+      "hasOptions": false,
+      "link": "https://orpc.dev",
+      "color": "#22c55e",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "paraglide",
+      "name": "Paraglide",
+      "description": "Typesafe i18n with compile-time message validation",
+      "type": "integration",
+      "category": "i18n",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
+      "color": "#7c3aed",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "strapi",
+      "name": "Strapi",
+      "description": "Open-source headless CMS with customizable API",
+      "type": "integration",
+      "category": "cms",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "partnerId": "strapi",
+      "hasOptions": false,
+      "link": "https://strapi.io",
+      "color": "#4945ff",
+      "demoRequiresTailwind": true
+    },
+    {
+      "id": "mcp",
+      "name": "MCP Server",
+      "description": "Model Context Protocol server for AI agent integrations",
+      "type": "integration",
+      "category": "other",
+      "modes": [
+        "file-router"
+      ],
+      "dependsOn": [],
+      "conflicts": [],
+      "hasOptions": false,
+      "link": "https://modelcontextprotocol.io",
+      "color": "#10b981"
+    }
+  ],
+  "customTemplates": [
+    {
+      "id": "blank",
+      "name": "Blank",
+      "description": "Start from scratch with a minimal TanStack Start project",
+      "icon": "plus",
+      "features": ["cloudflare"]
+    },
+    {
+      "id": "saas",
+      "name": "SaaS",
+      "description": "Auth, database, and monitoring for SaaS apps",
+      "icon": "rocket",
+      "features": [
+        "cloudflare",
+        "workos",
+        "neon",
+        "drizzle",
+        "sentry"
+      ]
+    },
+    {
+      "id": "ai-chat",
+      "name": "AI Chat",
+      "description": "LLM-powered chat app with streaming responses",
+      "icon": "sparkles",
+      "features": [
+        "cloudflare",
+        "ai",
+        "tanstack-query"
+      ]
+    },
+    {
+      "id": "dashboard",
+      "name": "Dashboard",
+      "description": "Admin panels, data tables, and forms",
+      "icon": "layout",
+      "features": [
+        "cloudflare",
+        "tanstack-table",
+        "tanstack-form",
+        "tanstack-query",
+        "shadcn"
+      ]
+    },
+    {
+      "id": "blog-cms",
+      "name": "Blog/CMS",
+      "description": "Content-driven site with headless CMS integration",
+      "icon": "file-text",
+      "features": [
+        "cloudflare",
+        "strapi",
+        "tanstack-query"
+      ]
+    },
+    {
+      "id": "api-first",
+      "name": "API-First",
+      "description": "Type-safe API with tRPC or oRPC",
+      "icon": "server",
+      "features": [
+        "cloudflare",
+        "trpc",
+        "tanstack-query",
+        "neon",
+        "drizzle"
+      ]
+    },
+    {
+      "id": "realtime",
+      "name": "Realtime",
+      "description": "Live data sync with Convex backend",
+      "icon": "radio",
+      "features": [
+        "cloudflare",
+        "convex"
+      ]
+    },
+    {
+      "id": "multi-language",
+      "name": "Multi-Language",
+      "description": "Internationalized app with typesafe i18n",
+      "icon": "globe",
+      "features": [
+        "cloudflare",
+        "paraglide"
+      ]
+    },
+    {
+      "id": "local-first",
+      "name": "Local-First",
+      "description": "Offline-capable app with local database",
+      "icon": "database",
+      "features": [
+        "cloudflare",
+        "tanstack-query",
+        "tanstack-store"
+      ]
+    }
+  ]
+}

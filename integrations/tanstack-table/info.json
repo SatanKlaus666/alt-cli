@@ -1,0 +1,26 @@
+{
+  "name": "TanStack Table",
+  "description": "Headless UI for building powerful tables with sorting, filtering, and pagination",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 25,
+  "link": "https://tanstack.com/table",
+  "smallLogo": "logos/table.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/table",
+      "name": "TanStack Table",
+      "icon": "Table",
+      "path": "src/routes/demo/table.tsx",
+      "jsName": "TableDemo"
+    }
+  ],
+
+  "hooks": []
+}

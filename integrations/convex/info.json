@@ -1,0 +1,55 @@
+{
+  "name": "Convex",
+  "description": "Real-time database with automatic syncing and TypeScript support",
+  "type": "integration",
+  "phase": "integration",
+  "category": "database",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://convex.dev",
+  "smallLogo": "logos/convex.svg",
+  "partnerId": "convex",
+
+  "dependsOn": ["tanstack-query"],
+  "conflicts": ["drizzle", "prisma", "neon"],
+
+  "options": {},
+
+  "routes": [
+    {
+      "url": "/demo/convex",
+      "name": "Convex",
+      "icon": "Database",
+      "path": "src/routes/demo/convex.tsx",
+      "jsName": "ConvexDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "root-provider",
+      "jsName": "ConvexProvider",
+      "path": "src/integrations/convex/provider.tsx",
+      "priority": 3
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "CONVEX_DEPLOYMENT",
+      "description": "Convex deployment identifier",
+      "required": true,
+      "example": "dev:your-deployment"
+    },
+    {
+      "name": "VITE_CONVEX_URL",
+      "description": "Convex deployment URL",
+      "required": true,
+      "example": "https://your-deployment.convex.cloud"
+    }
+  ],
+
+  "gitignorePatterns": [
+    ".convex/"
+  ]
+}

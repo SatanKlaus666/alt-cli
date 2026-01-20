@@ -1,0 +1,26 @@
+{
+  "name": "oRPC",
+  "description": "Type-safe API layer with OpenAPI and JSON Schema support",
+  "type": "integration",
+  "phase": "integration",
+  "category": "api",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://orpc.unnoq.com",
+  "smallLogo": "logos/orpc.svg",
+
+  "dependsOn": ["tanstack-query"],
+  "conflicts": ["trpc"],
+
+  "routes": [
+    {
+      "url": "/demo/orpc-todo",
+      "name": "oRPC Todo",
+      "icon": "Network",
+      "path": "src/routes/demo/orpc-todo.tsx",
+      "jsName": "ORPCTodos"
+    }
+  ],
+
+  "hooks": []
+}

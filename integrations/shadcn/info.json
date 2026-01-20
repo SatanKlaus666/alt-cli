@@ -1,0 +1,16 @@
+{
+  "name": "shadcn/ui",
+  "description": "Beautifully designed components built with Radix UI and Tailwind CSS",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tooling",
+  "modes": ["file-router", "code-router"],
+  "priority": 0,
+  "link": "https://ui.shadcn.com",
+  "smallLogo": "logos/shadcn.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "hooks": []
+}

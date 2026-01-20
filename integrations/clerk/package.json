@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@clerk/tanstack-start": "^0.10.0"
+  }
+}

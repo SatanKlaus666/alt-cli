@@ -1,0 +1,36 @@
+{
+  "name": "Paraglide i18n",
+  "description": "Type-safe internationalization with Inlang Paraglide",
+  "type": "integration",
+  "phase": "integration",
+  "category": "i18n",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
+  "smallLogo": "logos/paraglide.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/i18n",
+      "name": "i18n",
+      "icon": "Globe",
+      "path": "src/routes/demo/i18n.tsx",
+      "jsName": "I18nDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "vite-plugin",
+      "jsName": "paraglide",
+      "path": "paraglide-vite-plugin.ts"
+    }
+  ],
+
+  "scripts": {
+    "paraglide:compile": "paraglide-js compile --project ./project.inlang"
+  }
+}

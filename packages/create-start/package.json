@@ -1,0 +1,30 @@
+{
+  "name": "@tanstack/create-start",
+  "version": "0.0.1",
+  "description": "Create TanStack Start applications",
+  "author": "Tanner Linsley",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TanStack/cli.git",
+    "directory": "packages/create-start"
+  },
+  "homepage": "https://tanstack.com/start",
+  "keywords": [
+    "tanstack",
+    "create",
+    "scaffold",
+    "start",
+    "react"
+  ],
+  "type": "module",
+  "bin": {
+    "create-start": "./bin.mjs"
+  },
+  "files": [
+    "bin.mjs"
+  ],
+  "dependencies": {
+    "@tanstack/cli": "workspace:*"
+  }
+}

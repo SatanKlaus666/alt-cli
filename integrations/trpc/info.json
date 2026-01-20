@@ -1,0 +1,26 @@
+{
+  "name": "tRPC",
+  "description": "End-to-end typesafe APIs with automatic TypeScript inference",
+  "type": "integration",
+  "phase": "integration",
+  "category": "api",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://trpc.io",
+  "smallLogo": "logos/trpc.svg",
+
+  "dependsOn": ["tanstack-query"],
+  "conflicts": ["orpc"],
+
+  "routes": [
+    {
+      "url": "/demo/trpc",
+      "name": "tRPC",
+      "icon": "Zap",
+      "path": "src/routes/demo/trpc.tsx",
+      "jsName": "TrpcDemo"
+    }
+  ],
+
+  "hooks": []
+}

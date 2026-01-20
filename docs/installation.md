@@ -1,45 +1,23 @@
-# Installation
+---
+id: installation
+title: Installation
+---
 
-## Core Package
-
-```bash
-npm install @tanstack/template
-# or
-pnpm add @tanstack/template
-# or
-yarn add @tanstack/template
-```
-
-## React
+## npx (Recommended)
 
 ```bash
-npm install @tanstack/react-template
-# or
-pnpm add @tanstack/react-template
-# or
-yarn add @tanstack/react-template
+npx @tanstack/cli create my-app
 ```
 
-## Solid
+## Global
 
 ```bash
-npm install @tanstack/solid-template
-# or
-pnpm add @tanstack/solid-template
-# or
-yarn add @tanstack/solid-template
+npm install -g @tanstack/cli
+# or: pnpm add -g @tanstack/cli
+
+tanstack create my-app
 ```
 
-## Devtools
+## Requirements
 
-### React Devtools
-
-```bash
-npm install @tanstack/react-template-devtools
-```
-
-### Solid Devtools
-
-```bash
-npm install @tanstack/solid-template-devtools
-```
+- Node.js 18+

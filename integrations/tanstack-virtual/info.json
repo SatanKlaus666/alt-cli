@@ -1,0 +1,26 @@
+{
+  "name": "TanStack Virtual",
+  "description": "Headless virtualization for efficiently rendering massive lists and grids",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://tanstack.com/virtual",
+  "smallLogo": "logos/virtual.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/virtual",
+      "name": "TanStack Virtual",
+      "icon": "List",
+      "path": "src/routes/demo/virtual.tsx",
+      "jsName": "VirtualDemo"
+    }
+  ],
+
+  "hooks": []
+}

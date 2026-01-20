@@ -1,0 +1,26 @@
+{
+  "name": "TanStack Pacer",
+  "description": "Rate limiting utilities with debounce, throttle, and async queue management",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://tanstack.com/pacer",
+  "smallLogo": "logos/pacer.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/pacer",
+      "name": "TanStack Pacer",
+      "icon": "Timer",
+      "path": "src/routes/demo/pacer.tsx",
+      "jsName": "PacerDemo"
+    }
+  ],
+
+  "hooks": []
+}

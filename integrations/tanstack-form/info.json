@@ -1,0 +1,26 @@
+{
+  "name": "TanStack Form",
+  "description": "Headless, type-safe form state management with first-class TypeScript support",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 25,
+  "link": "https://tanstack.com/form",
+  "smallLogo": "logos/form.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/form",
+      "name": "TanStack Form",
+      "icon": "FormInput",
+      "path": "src/routes/demo/form.tsx",
+      "jsName": "FormDemo"
+    }
+  ],
+
+  "hooks": []
+}

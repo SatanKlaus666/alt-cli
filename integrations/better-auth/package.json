@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "better-auth": "^1.2.0",
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0"
+  },
+  "scripts": {
+    "db:auth:generate": "npx @better-auth/cli generate",
+    "db:auth:migrate": "npx @better-auth/cli migrate"
+  }
+}

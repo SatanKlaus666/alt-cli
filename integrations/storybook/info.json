@@ -1,0 +1,20 @@
+{
+  "name": "Storybook",
+  "description": "Component development environment for building UI in isolation",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tooling",
+  "modes": ["file-router", "code-router"],
+  "priority": 0,
+  "link": "https://storybook.js.org",
+  "smallLogo": "logos/storybook.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "hooks": [],
+
+  "gitignorePatterns": [
+    "storybook-static/"
+  ]
+}

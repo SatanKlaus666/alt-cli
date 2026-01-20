@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@inlang/paraglide-js": "^1.11.0",
+    "@inlang/paraglide-vite": "^1.0.0"
+  }
+}

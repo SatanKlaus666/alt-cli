@@ -1,0 +1,30 @@
+{
+  "name": "Cloudflare",
+  "description": "Deploy to Cloudflare Workers with Vite",
+  "type": "deployment",
+  "phase": "integration",
+  "category": "deploy",
+  "modes": ["file-router", "code-router"],
+  "priority": 10,
+  "link": "https://developers.cloudflare.com/pages",
+  "smallLogo": "logos/cloudflare.svg",
+  "partnerId": "cloudflare",
+
+  "dependsOn": [],
+  "conflicts": ["netlify", "vercel", "nitro"],
+
+  "hooks": [
+    {
+      "type": "vite-plugin",
+      "import": "import { cloudflare } from '@cloudflare/vite-plugin'",
+      "code": "cloudflare()"
+    }
+  ],
+
+  "packageAdditions": {
+    "scripts": {
+      "preview": "wrangler dev",
+      "deploy": "wrangler deploy"
+    }
+  }
+}

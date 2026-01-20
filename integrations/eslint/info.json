@@ -1,0 +1,16 @@
+{
+  "name": "ESLint",
+  "description": "ESLint + Prettier toolchain support",
+  "type": "toolchain",
+  "phase": "setup",
+  "category": "tooling",
+  "modes": ["file-router", "code-router"],
+  "priority": 0,
+  "link": "https://eslint.org",
+  "smallLogo": "logos/eslint.svg",
+
+  "dependsOn": [],
+  "conflicts": ["biome"],
+
+  "hooks": []
+}

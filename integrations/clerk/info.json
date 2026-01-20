@@ -1,0 +1,53 @@
+{
+  "name": "Clerk",
+  "description": "Complete user management with authentication, sessions, and user profiles",
+  "type": "integration",
+  "phase": "integration",
+  "category": "auth",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://clerk.com",
+  "smallLogo": "logos/clerk.svg",
+  "partnerId": "clerk",
+
+  "dependsOn": [],
+  "conflicts": ["better-auth", "workos"],
+
+  "routes": [
+    {
+      "url": "/demo/clerk",
+      "name": "Clerk Auth",
+      "icon": "User",
+      "path": "src/routes/demo/clerk.tsx",
+      "jsName": "ClerkDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "root-provider",
+      "jsName": "ClerkProvider",
+      "path": "src/integrations/clerk/provider.tsx"
+    },
+    {
+      "type": "header-user",
+      "jsName": "ClerkHeaderUser",
+      "path": "src/integrations/clerk/header-user.tsx"
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "CLERK_PUBLISHABLE_KEY",
+      "description": "Your Clerk publishable key from the Clerk dashboard",
+      "required": true,
+      "example": "pk_test_..."
+    },
+    {
+      "name": "CLERK_SECRET_KEY",
+      "description": "Your Clerk secret key from the Clerk dashboard",
+      "required": true,
+      "example": "sk_test_..."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Better Auth",
+  "description": "Open source authentication framework for TypeScript",
+  "type": "integration",
+  "phase": "integration",
+  "category": "auth",
+  "modes": ["file-router"],
+  "priority": 30,
+  "link": "https://www.better-auth.com",
+  "smallLogo": "logos/better-auth.svg",
+
+  "dependsOn": [],
+  "conflicts": ["clerk", "workos"],
+
+  "routes": [
+    {
+      "url": "/demo/auth",
+      "name": "Better Auth",
+      "icon": "Shield",
+      "path": "src/routes/demo/auth.tsx",
+      "jsName": "AuthDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "root-provider",
+      "jsName": "BetterAuthProvider",
+      "path": "src/integrations/better-auth/provider.tsx"
+    },
+    {
+      "type": "header-user",
+      "jsName": "BetterAuthHeaderUser",
+      "path": "src/integrations/better-auth/header-user.tsx"
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "BETTER_AUTH_SECRET",
+      "description": "Secret key for encryption (min 32 chars)",
+      "required": true,
+      "example": "your-secret-key-at-least-32-characters"
+    },
+    {
+      "name": "BETTER_AUTH_URL",
+      "description": "Base URL of your application",
+      "required": true,
+      "example": "http://localhost:3000"
+    }
+  ]
+}

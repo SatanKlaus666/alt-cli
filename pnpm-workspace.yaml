@@ -3,5 +3,5 @@ linkWorkspacePackages: true
 preferWorkspacePackages: true
 
 packages:
-  - 'examples/**/*'
   - 'packages/*'
+  - 'addons'

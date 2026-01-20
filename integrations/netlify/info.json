@@ -1,0 +1,27 @@
+{
+  "name": "Netlify",
+  "description": "Deploy to Netlify with TanStack Start support",
+  "type": "deployment",
+  "phase": "integration",
+  "category": "deploy",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://docs.netlify.com",
+  "smallLogo": "logos/netlify.svg",
+  "partnerId": "netlify",
+
+  "dependsOn": [],
+  "conflicts": ["vercel", "cloudflare"],
+
+  "routes": [],
+
+  "hooks": [
+    {
+      "type": "vite-plugin",
+      "import": "import netlify from '@netlify/vite-plugin-tanstack-start'",
+      "code": "netlify()"
+    }
+  ],
+
+  "envVars": []
+}

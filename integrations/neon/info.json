@@ -1,0 +1,42 @@
+{
+  "name": "Neon",
+  "description": "Serverless Postgres database with autoscaling",
+  "type": "integration",
+  "phase": "integration",
+  "category": "database",
+  "modes": ["file-router"],
+  "priority": 20,
+  "link": "https://neon.tech",
+  "smallLogo": "logos/neon.svg",
+  "partnerId": "neon",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/neon",
+      "name": "Neon DB",
+      "icon": "Database",
+      "path": "src/routes/demo/neon.tsx",
+      "jsName": "NeonDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "vite-plugin",
+      "jsName": "neon",
+      "path": "neon-vite-plugin.ts"
+    }
+  ],
+
+  "envVars": [
+    {
+      "name": "VITE_DATABASE_URL",
+      "description": "Neon database connection string",
+      "required": true,
+      "example": "postgresql://user:pass@ep-xxx.region.aws.neon.tech/dbname"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "TanStack AI",
+  "description": "Build AI-powered chat and completion features with TanStack AI",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://tanstack.com/ai",
+  "smallLogo": "logos/ai.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/ai",
+      "name": "AI Chat",
+      "icon": "Bot",
+      "path": "src/routes/demo/ai.tsx",
+      "jsName": "AiDemo"
+    }
+  ],
+
+  "hooks": [],
+
+  "envVars": [
+    {
+      "name": "OPENAI_API_KEY",
+      "description": "Your OpenAI API key for AI features",
+      "required": true,
+      "example": "sk-..."
+    }
+  ]
+}

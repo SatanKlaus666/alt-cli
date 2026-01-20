@@ -1,74 +1,57 @@
-# Quick Start
+---
+id: quick-start
+title: Quick Start
+---
 
-## Core Usage
+## Create a Project
 
-```typescript
-import { createTemplate } from '@tanstack/template'
-
-const template = createTemplate({ message: 'Hello!' })
-template.greet() // Logs: Hello!
+```bash
+npx @tanstack/cli create my-app
 ```
 
-## React Usage
+Interactive prompts guide you through project name, package manager, and integration selection.
 
-```tsx
-import { createTemplate } from '@tanstack/template'
-import { useTemplate } from '@tanstack/react-template'
+## Non-Interactive
 
-function App() {
-  const template = React.useMemo(() => createTemplate(), [])
-  const state = useTemplate(template)
+```bash
+# Defaults only
+npx @tanstack/cli create my-app -y
 
-  return <div>{state.message}</div>
-}
+# With integrations
+npx @tanstack/cli create my-app --integrations tanstack-query,clerk,drizzle
 ```
 
-## Solid Usage
+## Run the Project
 
-```tsx
-import { createTemplate } from '@tanstack/template'
-import { createTemplateSignal } from '@tanstack/solid-template'
-
-function App() {
-  const template = createTemplate()
-  const state = createTemplateSignal(template)
-
-  return <div>{state().message}</div>
-}
+```bash
+cd my-app
+pnpm dev
+# Open http://localhost:3000
 ```
 
-## With Devtools
+## Environment Variables
 
-### React
+Some integrations require API keys. After creation:
 
-```tsx
-import { TemplateDevtools } from '@tanstack/react-template-devtools'
-
-function App() {
-  // ... your code
-
-  return (
-    <div>
-      {/* your app */}
-      <TemplateDevtools />
-    </div>
-  )
-}
+```bash
+cp .env.example .env
+# Edit .env with your values
 ```
 
-### Solid
+## Project Structure
 
-```tsx
-import { TemplateDevtools } from '@tanstack/solid-template-devtools'
-
-function App() {
-  // ... your code
-
-  return (
-    <div>
-      {/* your app */}
-      <TemplateDevtools />
-    </div>
-  )
-}
 ```
+my-app/
+├── src/
+│   ├── routes/          # File-based routing
+│   │   ├── __root.tsx   # Root layout
+│   │   └── index.tsx    # Home page
+│   └── integrations/    # Integration code
+├── .tanstack.json       # CLI config
+└── .env.example         # Required env vars
+```
+
+## Next Steps
+
+- [CLI Reference](./cli-reference.md) - All options
+- [Integrations](./integrations.md) - Available integrations

@@ -1,0 +1,32 @@
+{
+  "name": "TanStack Store",
+  "description": "Framework-agnostic type-safe state management with React bindings",
+  "type": "integration",
+  "phase": "integration",
+  "category": "tanstack",
+  "modes": ["file-router", "code-router"],
+  "priority": 20,
+  "link": "https://tanstack.com/store",
+  "smallLogo": "logos/store.svg",
+
+  "dependsOn": [],
+  "conflicts": [],
+
+  "routes": [
+    {
+      "url": "/demo/store",
+      "name": "TanStack Store",
+      "icon": "Database",
+      "path": "src/routes/demo/store.tsx",
+      "jsName": "StoreDemo"
+    }
+  ],
+
+  "hooks": [
+    {
+      "type": "devtools",
+      "jsName": "storeDevtoolsPlugin",
+      "path": "src/integrations/store/devtools.tsx"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Biome",
+  "description": "Fast formatter and linter for JavaScript, TypeScript, and more",
+  "type": "toolchain",
+  "phase": "setup",
+  "category": "tooling",
+  "modes": ["file-router", "code-router"],
+  "priority": 2,
+  "link": "https://biomejs.dev",
+  "smallLogo": "logos/biome.svg",
+
+  "dependsOn": [],
+  "conflicts": ["eslint"],
+
+  "hooks": []
+}

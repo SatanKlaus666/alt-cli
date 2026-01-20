@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@tanstack/ai-react": "^0.1.0",
+    "@ai-sdk/openai": "^1.1.0"
+  }
+}
