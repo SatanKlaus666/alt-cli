@@ -6,7 +6,7 @@
   "category": "deploy",
   "modes": ["file-router", "code-router"],
   "priority": 10,
-  "link": "https://developers.cloudflare.com/pages",
+  "link": "https://developers.cloudflare.com/workers",
   "smallLogo": "logos/cloudflare.svg",
   "partnerId": "cloudflare",
 
@@ -17,14 +17,15 @@
     {
       "type": "vite-plugin",
       "import": "import { cloudflare } from '@cloudflare/vite-plugin'",
-      "code": "cloudflare()"
+      "code": "cloudflare({ viteEnvironment: { name: 'ssr' } })"
     }
   ],
 
   "packageAdditions": {
     "scripts": {
-      "preview": "wrangler dev",
-      "deploy": "wrangler deploy"
+      "preview": "npm run build && vite preview",
+      "deploy": "npm run build && wrangler deploy",
+      "cf-typegen": "wrangler types"
     }
   }
 }

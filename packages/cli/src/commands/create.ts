@@ -406,13 +406,22 @@ export async function runCreate(
   // Install dependencies
   if (options.install !== false) {
     s.start(`Installing dependencies with ${packageManager}...`)
+    const startTime = Date.now()
+    const interval = setInterval(() => {
+      const elapsed = Math.floor((Date.now() - startTime) / 1000)
+      s.message(`Installing dependencies with ${packageManager}... (${elapsed}s)`)
+    }, 1000)
+
     try {
       const { execSync } = await import('node:child_process')
       const installCmd =
         packageManager === 'yarn' ? 'yarn' : `${packageManager} install`
       execSync(installCmd, { cwd: targetDir, stdio: 'ignore' })
-      s.stop('Dependencies installed')
+      clearInterval(interval)
+      const total = Math.floor((Date.now() - startTime) / 1000)
+      s.stop(`Dependencies installed (${total}s)`)
     } catch {
+      clearInterval(interval)
       s.stop('Dependency installation failed')
       log.warning(`Run "${packageManager} install" manually to install dependencies.`)
     }

@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { useState } from 'react'
-import { getClient } from '~/db'
+import { getClient } from '~/neon'
 
 const getTodos = createServerFn({ method: 'GET' }).handler(async () => {
   const sql = getClient()

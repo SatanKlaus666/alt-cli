@@ -113,6 +113,9 @@ function buildPackageJson(
   options: CompileOptions,
   packages: CompileOutput['packages'],
 ): string {
+  // Header is shown when there are integrations and tailwind is enabled
+  const hasHeader = options.chosenIntegrations.length > 0 && options.tailwind
+
   const pkg = {
     name: options.projectName,
     private: true,
@@ -130,11 +133,12 @@ function buildPackageJson(
       react: '^19.0.0',
       'react-dom': '^19.0.0',
       'vite-tsconfig-paths': '^5.1.4',
+      ...(hasHeader ? { 'lucide-react': '^0.468.0' } : {}),
       ...packages.dependencies,
     },
     devDependencies: {
       '@vitejs/plugin-react': '^4.4.1',
-      vite: '^6.3.5',
+      vite: '^7.0.0',
       ...(options.typescript
         ? {
             '@types/react': '^19.0.0',

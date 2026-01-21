@@ -1,5 +1,5 @@
-import { useQuery } from '@tanstack/react-db'
-import { db } from '~/lib/demo-db'
+import { useLiveQuery } from '@tanstack/react-db'
+import { todosCollection } from '~/lib/demo-db'
 
 export const dbDevtoolsPlugin = {
   name: 'TanStack DB',
@@ -12,7 +12,7 @@ export const dbDevtoolsPlugin = {
 }
 
 function DbInspector() {
-  const todos = useQuery(db.collections.todos.query())
+  const todos = useLiveQuery(todosCollection)
   return (
     <div>
       <div className="text-xs text-gray-400 mb-1">todos ({todos.length})</div>

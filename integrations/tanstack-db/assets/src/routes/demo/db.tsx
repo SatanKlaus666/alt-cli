@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { useQuery } from '@tanstack/react-db'
-import { db, addTodo, toggleTodo, deleteTodo } from '~/lib/demo-db'
+import { useLiveQuery, createTransaction } from '@tanstack/react-db'
+import { todosCollection, type Todo } from '~/lib/demo-db'
 
 export const Route = createFileRoute('/demo/db')({
   component: DbDemo,
@@ -9,14 +9,53 @@ export const Route = createFileRoute('/demo/db')({
 
 function DbDemo() {
   const [newTodo, setNewTodo] = useState('')
-  const todos = useQuery(db.collections.todos.query().orderBy('createdAt', 'desc'))
+  const todos = useLiveQuery(todosCollection)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (newTodo.trim()) {
-      addTodo(newTodo.trim())
-      setNewTodo('')
-    }
+    if (!newTodo.trim()) return
+
+    const tx = createTransaction({
+      mutationFn: async () => {
+        // Local-only collection auto-persists
+      },
+    })
+
+    tx.mutate(() => {
+      todosCollection.insert({
+        id: crypto.randomUUID(),
+        text: newTodo.trim(),
+        completed: false,
+        createdAt: Date.now(),
+      })
+    })
+
+    await tx.commit()
+    setNewTodo('')
+  }
+
+  const handleToggle = async (todo: Todo) => {
+    const tx = createTransaction({
+      mutationFn: async () => {},
+    })
+
+    tx.mutate(() => {
+      todosCollection.update(todo.id, { completed: !todo.completed })
+    })
+
+    await tx.commit()
+  }
+
+  const handleDelete = async (id: string) => {
+    const tx = createTransaction({
+      mutationFn: async () => {},
+    })
+
+    tx.mutate(() => {
+      todosCollection.delete(id)
+    })
+
+    await tx.commit()
   }
 
   return (
@@ -51,7 +90,7 @@ function DbDemo() {
               <input
                 type="checkbox"
                 checked={todo.completed}
-                onChange={() => toggleTodo(todo.id)}
+                onChange={() => handleToggle(todo)}
                 className="w-5 h-5 rounded accent-orange-500"
               />
               <span
@@ -60,7 +99,7 @@ function DbDemo() {
                 {todo.text}
               </span>
               <button
-                onClick={() => deleteTodo(todo.id)}
+                onClick={() => handleDelete(todo.id)}
                 className="px-2 py-1 text-red-400 hover:text-red-300 text-sm"
               >
                 Delete

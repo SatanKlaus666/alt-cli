@@ -11,7 +11,7 @@
   "partnerId": "neon",
 
   "dependsOn": [],
-  "conflicts": [],
+  "conflicts": ["prisma"],
 
   "routes": [
     {

@@ -50,5 +50,7 @@
 
   "gitignorePatterns": [
     "prisma/migrations/"
-  ]
+  ],
+
+  "postInstallMessage": "Run 'pnpm db:generate' after setting DATABASE_URL in .env.local"
 }

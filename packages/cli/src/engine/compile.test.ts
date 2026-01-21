@@ -73,7 +73,8 @@ describe('compile', () => {
 
       expect(rootRoute).toContain('createRootRoute')
       expect(rootRoute).toContain('TanStackRouterDevtools')
-      expect(rootRoute).toContain('Outlet')
+      expect(rootRoute).toContain('shellComponent')
+      expect(rootRoute).toContain('{children}')
     })
   })
 

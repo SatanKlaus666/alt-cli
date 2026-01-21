@@ -1,6 +1,6 @@
 {
   "name": "Nitro",
-  "description": "Deploy anywhere with Nitro 3 universal server engine",
+  "description": "Deploy anywhere with Nitro 3 universal server engine (requires vite 7+)",
   "type": "deployment",
   "phase": "integration",
   "category": "deploy",

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { useDebounce, useThrottle } from '@tanstack/react-pacer'
+import { useDebouncedValue, useDebouncedCallback, useThrottledCallback } from '@tanstack/react-pacer'
 
 export const Route = createFileRoute('/demo/pacer')({
   component: PacerDemo,
@@ -12,14 +12,14 @@ function PacerDemo() {
   const [debouncedCount, setDebouncedCount] = useState(0)
   const [throttledCount, setThrottledCount] = useState(0)
 
-  const debouncedSearch = useDebounce(searchTerm, { wait: 500 })
+  const debouncedSearch = useDebouncedValue(searchTerm, { wait: 500 })
   
-  const handleDebouncedClick = useDebounce(
+  const handleDebouncedClick = useDebouncedCallback(
     () => setDebouncedCount((c) => c + 1),
     { wait: 300 }
   )
 
-  const handleThrottledClick = useThrottle(
+  const handleThrottledClick = useThrottledCallback(
     () => setThrottledCount((c) => c + 1),
     { wait: 500 }
   )

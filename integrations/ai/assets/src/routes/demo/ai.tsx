@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { useAIChat } from '@tanstack/ai-react'
+import { useChat } from '@tanstack/ai-react'
 
 export const Route = createFileRoute('/demo/ai')({
   component: AiDemo,
@@ -7,7 +7,7 @@ export const Route = createFileRoute('/demo/ai')({
 
 function AiDemo() {
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
-    useAIChat({
+    useChat({
       api: '/api/chat',
     })
 
