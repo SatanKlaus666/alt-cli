@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 20,
   "link": "https://tanstack.com/pacer",
-  "smallLogo": "logos/pacer.svg",
 
   "dependsOn": [],
   "conflicts": [],

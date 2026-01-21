@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 2,
   "link": "https://biomejs.dev",
-  "smallLogo": "logos/biome.svg",
 
   "dependsOn": [],
   "conflicts": ["eslint"],

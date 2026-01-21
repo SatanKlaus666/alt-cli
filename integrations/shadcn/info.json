@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 0,
   "link": "https://ui.shadcn.com",
-  "smallLogo": "logos/shadcn.svg",
 
   "dependsOn": [],
   "conflicts": [],

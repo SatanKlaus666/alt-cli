@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 20,
   "link": "https://nitro.build",
-  "smallLogo": "logos/nitro.svg",
 
   "dependsOn": [],
   "conflicts": ["netlify", "cloudflare"],

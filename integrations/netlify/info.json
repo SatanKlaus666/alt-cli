@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 20,
   "link": "https://docs.netlify.com",
-  "smallLogo": "logos/netlify.svg",
   "partnerId": "netlify",
 
   "dependsOn": [],

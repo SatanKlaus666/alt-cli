@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://orm.drizzle.team",
-  "smallLogo": "logos/drizzle.svg",
 
   "dependsOn": [],
   "conflicts": ["prisma", "convex"],

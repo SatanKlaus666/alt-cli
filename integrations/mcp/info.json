@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 0,
   "link": "https://modelcontextprotocol.io",
-  "smallLogo": "logos/mcp.svg",
 
   "dependsOn": [],
   "conflicts": [],

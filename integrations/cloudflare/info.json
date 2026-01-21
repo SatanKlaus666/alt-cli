@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 10,
   "link": "https://workers.cloudflare.com/",
-  "smallLogo": "logos/cloudflare.svg",
   "partnerId": "cloudflare",
 
   "dependsOn": [],

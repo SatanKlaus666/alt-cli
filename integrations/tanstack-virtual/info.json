@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 20,
   "link": "https://tanstack.com/virtual",
-  "smallLogo": "logos/virtual.svg",
 
   "dependsOn": [],
   "conflicts": [],

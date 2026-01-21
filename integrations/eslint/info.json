@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 0,
   "link": "https://eslint.org",
-  "smallLogo": "logos/eslint.svg",
 
   "dependsOn": [],
   "conflicts": ["biome"],

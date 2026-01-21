@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 25,
   "link": "https://tanstack.com/table",
-  "smallLogo": "logos/table.svg",
 
   "dependsOn": [],
   "conflicts": [],

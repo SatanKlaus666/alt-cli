@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://neon.tech",
-  "smallLogo": "logos/neon.svg",
   "partnerId": "neon",
 
   "dependsOn": [],

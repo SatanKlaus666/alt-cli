@@ -7,7 +7,6 @@
   "modes": ["file-router", "code-router"],
   "priority": 0,
   "link": "https://storybook.js.org",
-  "smallLogo": "logos/storybook.svg",
 
   "dependsOn": [],
   "conflicts": [],

@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://clerk.com",
-  "smallLogo": "logos/clerk.svg",
   "partnerId": "clerk",
 
   "dependsOn": [],

@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://strapi.io",
-  "smallLogo": "logos/strapi.svg",
   "partnerId": "strapi",
 
   "dependsOn": [],

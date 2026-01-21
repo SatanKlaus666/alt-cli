@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://trpc.io",
-  "smallLogo": "logos/trpc.svg",
 
   "dependsOn": ["tanstack-query"],
   "conflicts": ["orpc"],

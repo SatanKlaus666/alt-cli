@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://workos.com",
-  "smallLogo": "logos/workos.svg",
   "partnerId": "workos",
 
   "dependsOn": [],

@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
-  "smallLogo": "logos/paraglide.svg",
 
   "dependsOn": [],
   "conflicts": [],

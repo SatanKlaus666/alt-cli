@@ -7,7 +7,6 @@
   "modes": ["file-router"],
   "priority": 20,
   "link": "https://www.prisma.io",
-  "smallLogo": "logos/prisma.svg",
   "partnerId": "prisma",
 
   "dependsOn": [],
