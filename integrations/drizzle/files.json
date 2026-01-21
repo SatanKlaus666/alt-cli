@@ -1,0 +1,6 @@
+[
+  "drizzle.config.ts",
+  "src/db/index.ts",
+  "src/db/schema.ts",
+  "src/routes/demo/drizzle.tsx"
+]

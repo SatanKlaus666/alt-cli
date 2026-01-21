@@ -1,0 +1,6 @@
+[
+  "src/components/workos-user.tsx",
+  "src/hooks/useUser.tsx",
+  "src/integrations/workos/provider.tsx",
+  "src/routes/demo/workos.tsx"
+]

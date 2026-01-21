@@ -1,0 +1,5 @@
+[
+  "src/integrations/clerk/header-user.tsx",
+  "src/integrations/clerk/provider.tsx",
+  "src/routes/demo/clerk.tsx"
+]

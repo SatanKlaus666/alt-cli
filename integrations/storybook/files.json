@@ -1,0 +1,6 @@
+[
+  ".storybook/main.ts",
+  ".storybook/preview.ts",
+  "src/stories/Button.stories.tsx",
+  "src/stories/Button.tsx"
+]

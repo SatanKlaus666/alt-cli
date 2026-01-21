@@ -1,0 +1,5 @@
+[
+  "src/integrations/db/devtools.tsx",
+  "src/lib/demo-db.ts",
+  "src/routes/demo/db.tsx"
+]

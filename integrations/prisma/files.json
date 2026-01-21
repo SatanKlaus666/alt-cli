@@ -1,0 +1,7 @@
+[
+  "prisma.config.ts",
+  "prisma/schema.prisma",
+  "prisma/seed.ts",
+  "src/db.ts",
+  "src/routes/demo/prisma.tsx"
+]

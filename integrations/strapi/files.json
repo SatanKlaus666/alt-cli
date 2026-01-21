@@ -1,0 +1,5 @@
+[
+  "src/lib/strapi.ts",
+  "src/routes/demo/strapi.$articleId.tsx",
+  "src/routes/demo/strapi.tsx"
+]

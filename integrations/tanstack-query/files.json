@@ -1,0 +1,5 @@
+[
+  "src/integrations/query/devtools.tsx",
+  "src/integrations/query/provider.tsx",
+  "src/routes/demo/query.tsx"
+]

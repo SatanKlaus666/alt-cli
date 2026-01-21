@@ -1,0 +1,6 @@
+[
+  "src/integrations/trpc/client.ts",
+  "src/integrations/trpc/router.ts",
+  "src/routes/api/trpc.$.ts",
+  "src/routes/demo/trpc.tsx"
+]

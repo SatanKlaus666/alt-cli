@@ -1,0 +1,7 @@
+[
+  "convex/schema.ts",
+  "convex/todos.ts",
+  "convex/tsconfig.json",
+  "src/integrations/convex/provider.tsx",
+  "src/routes/demo/convex.tsx"
+]

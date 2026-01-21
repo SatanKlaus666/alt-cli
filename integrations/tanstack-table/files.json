@@ -1,0 +1,4 @@
+[
+  "src/data/demo-table-data.ts",
+  "src/routes/demo/table.tsx"
+]

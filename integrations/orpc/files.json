@@ -1,0 +1,9 @@
+[
+  "src/orpc/client.ts",
+  "src/orpc/router/index.ts",
+  "src/orpc/router/todos.ts",
+  "src/orpc/schema.ts",
+  "src/polyfill.ts",
+  "src/routes/api/rpc/$.ts",
+  "src/routes/demo/orpc-todo.tsx"
+]

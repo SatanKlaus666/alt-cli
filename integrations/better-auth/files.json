@@ -1,0 +1,8 @@
+[
+  "src/integrations/better-auth/header-user.tsx",
+  "src/integrations/better-auth/provider.tsx",
+  "src/lib/auth-client.ts",
+  "src/lib/auth.ts",
+  "src/routes/api/auth/$.ts",
+  "src/routes/demo/auth.tsx"
+]

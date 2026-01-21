@@ -1,0 +1,4 @@
+[
+  "src/integrations/sentry/client.ts",
+  "src/integrations/sentry/vite-plugin.ts"
+]

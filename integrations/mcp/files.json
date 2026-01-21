@@ -1,0 +1,6 @@
+[
+  "mcp.json",
+  "src/mcp/index.ts",
+  "src/mcp/server.ts",
+  "src/mcp/tools/hello.ts"
+]

@@ -1,0 +1,7 @@
+[
+  "messages/en.json",
+  "paraglide-vite-plugin.ts",
+  "project.inlang/settings.json",
+  "src/lib/i18n.ts",
+  "src/routes/demo/i18n.tsx"
+]

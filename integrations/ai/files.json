@@ -1,0 +1,4 @@
+[
+  "src/routes/api/chat.ts",
+  "src/routes/demo/ai.tsx"
+]

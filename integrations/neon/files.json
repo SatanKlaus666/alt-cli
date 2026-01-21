@@ -1,0 +1,6 @@
+[
+  "db/init.sql",
+  "neon-vite-plugin.ts",
+  "src/neon.ts",
+  "src/routes/demo/neon.tsx"
+]

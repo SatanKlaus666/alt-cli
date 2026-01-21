@@ -1,0 +1,5 @@
+[
+  "src/integrations/store/devtools.tsx",
+  "src/lib/demo-store.ts",
+  "src/routes/demo/store.tsx"
+]
