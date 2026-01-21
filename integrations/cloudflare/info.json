@@ -6,7 +6,7 @@
   "category": "deploy",
   "modes": ["file-router", "code-router"],
   "priority": 10,
-  "link": "https://developers.cloudflare.com/workers",
+  "link": "https://workers.cloudflare.com/",
   "smallLogo": "logos/cloudflare.svg",
   "partnerId": "cloudflare",
 

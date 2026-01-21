@@ -311,7 +311,7 @@
       ],
       "partnerId": "cloudflare",
       "hasOptions": false,
-      "link": "https://pages.cloudflare.com",
+      "link": "https://workers.cloudflare.com/",
       "color": "#f38020"
     },
     {
