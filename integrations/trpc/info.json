@@ -9,7 +9,7 @@
   "link": "https://trpc.io",
 
   "dependsOn": ["tanstack-query"],
-  "conflicts": ["orpc"],
+  "exclusive": ["rpc"],
 
   "routes": [
     {

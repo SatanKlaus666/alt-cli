@@ -19,8 +19,8 @@ import { compile } from '../engine/compile.js'
 import { writeConfigFile } from '../engine/config-file.js'
 import { loadTemplate } from '../engine/custom-addons/template.js'
 import type {
-  IntegrationCompiled,
   CustomTemplateCompiled,
+  IntegrationCompiled,
   ManifestIntegration,
   PackageManager,
   RouterMode,

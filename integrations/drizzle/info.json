@@ -9,7 +9,7 @@
   "link": "https://orm.drizzle.team",
 
   "dependsOn": [],
-  "conflicts": ["prisma", "convex"],
+  "exclusive": ["orm", "database-backend"],
 
   "options": {
     "database": {

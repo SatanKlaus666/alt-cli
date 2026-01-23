@@ -2,7 +2,15 @@
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "ignoreDependencies": ["@faker-js/faker"],
   "ignoreWorkspaces": ["examples/**"],
+  "ignoreExportsUsedInFile": true,
   "workspaces": {
+    ".": {
+      "ignore": ["integrations/**", "scripts/**"]
+    },
+    "packages/cli": {
+      "entry": ["src/index.ts!", "src/bin.ts!"],
+      "ignore": ["src/cache/**", "src/mcp/types.ts"]
+    },
     "packages/react-pacer": {
       "ignore": []
     }

@@ -9,7 +9,7 @@
   "link": "https://nitro.build",
 
   "dependsOn": [],
-  "conflicts": ["netlify", "cloudflare"],
+  "exclusive": ["deploy"],
 
   "routes": [],
 
@@ -17,7 +17,7 @@
     {
       "type": "vite-plugin",
       "jsName": "nitro",
-      "path": "src/integrations/nitro/vite-plugin.ts"
+      "import": "import { nitro } from 'nitro/vite'"
     }
   ],
 

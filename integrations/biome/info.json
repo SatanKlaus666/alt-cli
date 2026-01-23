@@ -9,7 +9,7 @@
   "link": "https://biomejs.dev",
 
   "dependsOn": [],
-  "conflicts": ["eslint"],
+  "exclusive": ["linter"],
 
   "hooks": []
 }

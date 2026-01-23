@@ -13,7 +13,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/query",
       "color": "#EF4444",
@@ -30,7 +29,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/form",
       "color": "#EAB308",
@@ -47,7 +45,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/table",
       "color": "#3B82F6",
@@ -64,7 +61,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/store",
       "color": "#B45309",
@@ -81,7 +77,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/ai",
       "color": "#EC4899",
@@ -98,7 +93,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/db",
       "color": "#F97316",
@@ -115,7 +109,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/pacer",
       "color": "#84CC16",
@@ -132,7 +125,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://tanstack.com/virtual",
       "color": "#A855F7",
@@ -148,14 +140,13 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "prisma",
-        "convex"
-      ],
       "hasOptions": true,
       "link": "https://orm.drizzle.team",
       "color": "#c5f74f",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "orm"
+      ]
     },
     {
       "id": "prisma",
@@ -167,15 +158,14 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "drizzle",
-        "convex"
-      ],
       "partnerId": "prisma",
       "hasOptions": true,
       "link": "https://prisma.io",
-      "color": "#2d3748",
-      "demoRequiresTailwind": true
+      "color": "#5A67D8",
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "orm"
+      ]
     },
     {
       "id": "convex",
@@ -187,16 +177,15 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "drizzle",
-        "prisma",
-        "neon"
-      ],
       "partnerId": "convex",
       "hasOptions": false,
       "link": "https://convex.dev",
       "color": "#ee342f",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "orm",
+        "database-backend"
+      ]
     },
     {
       "id": "neon",
@@ -208,12 +197,14 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "partnerId": "neon",
       "hasOptions": false,
       "link": "https://neon.tech",
       "color": "#00e5bf",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "database-backend"
+      ]
     },
     {
       "id": "clerk",
@@ -225,15 +216,14 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "better-auth",
-        "workos"
-      ],
       "partnerId": "clerk",
       "hasOptions": false,
       "link": "https://clerk.com",
       "color": "#6c47ff",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "auth"
+      ]
     },
     {
       "id": "better-auth",
@@ -245,14 +235,13 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "clerk",
-        "workos"
-      ],
       "hasOptions": false,
       "link": "https://better-auth.com",
       "color": "#f97316",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "auth"
+      ]
     },
     {
       "id": "workos",
@@ -264,15 +253,14 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "clerk",
-        "better-auth"
-      ],
       "partnerId": "workos",
       "hasOptions": false,
       "link": "https://workos.com",
       "color": "#6366f1",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "auth"
+      ]
     },
     {
       "id": "netlify",
@@ -285,14 +273,13 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "cloudflare",
-        "nitro"
-      ],
       "partnerId": "netlify",
       "hasOptions": false,
       "link": "https://netlify.com",
-      "color": "#00c7b7"
+      "color": "#00c7b7",
+      "exclusive": [
+        "deploy"
+      ]
     },
     {
       "id": "cloudflare",
@@ -305,14 +292,34 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "netlify",
-        "nitro"
-      ],
       "partnerId": "cloudflare",
       "hasOptions": false,
       "link": "https://workers.cloudflare.com/",
-      "color": "#f38020"
+      "color": "#f38020",
+      "exclusive": [
+        "deploy"
+      ]
+    },
+    {
+      "id": "railway",
+      "name": "Railway",
+      "description": "Deploy to Railway with automatic builds and scaling",
+      "type": "deployment",
+      "category": "deploy",
+      "modes": [
+        "file-router",
+        "code-router"
+      ],
+      "dependsOn": [
+        "nitro"
+      ],
+      "partnerId": "railway",
+      "hasOptions": false,
+      "link": "https://railway.com",
+      "color": "#9B4DCA",
+      "exclusive": [
+        "deploy"
+      ]
     },
     {
       "id": "nitro",
@@ -325,13 +332,12 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "netlify",
-        "cloudflare"
-      ],
       "hasOptions": false,
       "link": "https://nitro.build",
-      "color": "#FACC15"
+      "color": "#FACC15",
+      "exclusive": [
+        "deploy"
+      ]
     },
     {
       "id": "shadcn",
@@ -344,10 +350,9 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://ui.shadcn.com",
-      "color": "#18181b",
+      "color": "#71717A",
       "requiresTailwind": true
     },
     {
@@ -361,12 +366,12 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "eslint"
-      ],
       "hasOptions": false,
       "link": "https://biomejs.dev",
-      "color": "#60a5fa"
+      "color": "#60a5fa",
+      "exclusive": [
+        "linter"
+      ]
     },
     {
       "id": "eslint",
@@ -379,12 +384,12 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [
-        "biome"
-      ],
       "hasOptions": false,
       "link": "https://eslint.org",
-      "color": "#4b32c3"
+      "color": "#4b32c3",
+      "exclusive": [
+        "linter"
+      ]
     },
     {
       "id": "sentry",
@@ -396,11 +401,10 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "partnerId": "sentry",
       "hasOptions": false,
       "link": "https://sentry.io",
-      "color": "#362d59",
+      "color": "#8B5CF6",
       "demoRequiresTailwind": true
     },
     {
@@ -414,7 +418,6 @@
         "code-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://storybook.js.org",
       "color": "#ff4785",
@@ -432,13 +435,13 @@
       "dependsOn": [
         "tanstack-query"
       ],
-      "conflicts": [
-        "orpc"
-      ],
       "hasOptions": false,
       "link": "https://trpc.io",
       "color": "#2596be",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "rpc"
+      ]
     },
     {
       "id": "orpc",
@@ -452,13 +455,13 @@
       "dependsOn": [
         "tanstack-query"
       ],
-      "conflicts": [
-        "trpc"
-      ],
       "hasOptions": false,
       "link": "https://orpc.dev",
       "color": "#22c55e",
-      "demoRequiresTailwind": true
+      "demoRequiresTailwind": true,
+      "exclusive": [
+        "rpc"
+      ]
     },
     {
       "id": "paraglide",
@@ -470,7 +473,6 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://inlang.com/m/gerre34r/library-inlang-paraglideJs",
       "color": "#7c3aed",
@@ -486,7 +488,6 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "partnerId": "strapi",
       "hasOptions": false,
       "link": "https://strapi.io",
@@ -503,7 +504,6 @@
         "file-router"
       ],
       "dependsOn": [],
-      "conflicts": [],
       "hasOptions": false,
       "link": "https://modelcontextprotocol.io",
       "color": "#10b981"
@@ -515,7 +515,9 @@
       "name": "Blank",
       "description": "Start from scratch with a minimal TanStack Start project",
       "icon": "plus",
-      "features": ["cloudflare"]
+      "features": [
+        "cloudflare"
+      ]
     },
     {
       "id": "saas",

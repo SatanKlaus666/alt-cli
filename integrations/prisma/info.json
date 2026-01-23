@@ -10,7 +10,7 @@
   "partnerId": "prisma",
 
   "dependsOn": [],
-  "conflicts": ["drizzle", "convex"],
+  "exclusive": ["orm", "database-backend"],
 
   "options": {
     "database": {

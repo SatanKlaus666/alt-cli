@@ -1,0 +1,26 @@
+{
+  "name": "Railway",
+  "description": "Deploy to Railway with automatic builds and scaling",
+  "type": "deployment",
+  "phase": "integration",
+  "category": "deploy",
+  "modes": ["file-router", "code-router"],
+  "priority": 15,
+  "link": "https://railway.com",
+  "partnerId": "railway",
+
+  "dependsOn": ["nitro"],
+  "exclusive": ["deploy"],
+
+  "routes": [],
+
+  "hooks": [],
+
+  "packageAdditions": {
+    "scripts": {
+      "start": "node .output/server/index.mjs"
+    }
+  },
+
+  "envVars": []
+}

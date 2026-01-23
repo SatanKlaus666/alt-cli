@@ -9,7 +9,7 @@
   "link": "https://orpc.unnoq.com",
 
   "dependsOn": ["tanstack-query"],
-  "conflicts": ["trpc"],
+  "exclusive": ["rpc"],
 
   "routes": [
     {

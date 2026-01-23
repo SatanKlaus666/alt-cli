@@ -13,7 +13,7 @@ import { readConfigFile } from '../config-file.js'
 import { fetchIntegrations } from '../../api/fetch.js'
 
 import type { PersistedOptions } from '../config-file.js'
-import type { IntegrationCompiled, CompileOptions, CompileOutput } from '../types.js'
+import type { CompileOptions, CompileOutput, IntegrationCompiled } from '../types.js'
 
 // Files to always ignore (from Jack's IGNORE_FILES)
 const IGNORE_FILES = [

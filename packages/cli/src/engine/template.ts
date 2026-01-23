@@ -1,8 +1,8 @@
 import { render } from 'ejs'
 import type {
-  IntegrationCompiled,
   CompileOptions,
   Hook,
+  IntegrationCompiled,
   Route,
 } from './types.js'
 

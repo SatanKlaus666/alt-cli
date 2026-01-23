@@ -1,12 +1,12 @@
 import { getBaseFiles, getBaseFilesWithAttribution } from '../templates/base.js'
 import { processTemplateFile } from './template.js'
 import type {
-  IntegrationCompiled,
-  IntegrationPhase,
   AttributedCompileOutput,
   CompileOptions,
   CompileOutput,
   EnvVar,
+  IntegrationCompiled,
+  IntegrationPhase,
   LineAttribution,
 } from './types.js'
 
@@ -130,8 +130,8 @@ function buildPackageJson(
       '@tanstack/react-router': '^1.132.0',
       '@tanstack/react-router-devtools': '^1.132.0',
       '@tanstack/react-start': '^1.132.0',
-      react: '^19.0.0',
-      'react-dom': '^19.0.0',
+      react: '^19.2.0',
+      'react-dom': '^19.2.0',
       'vite-tsconfig-paths': '^5.1.4',
       ...(hasHeader ? { 'lucide-react': '^0.468.0' } : {}),
       ...packages.dependencies,
@@ -141,8 +141,8 @@ function buildPackageJson(
       vite: '^7.0.0',
       ...(options.typescript
         ? {
-            '@types/react': '^19.0.0',
-            '@types/react-dom': '^19.0.0',
+            '@types/react': '^19.2.0',
+            '@types/react-dom': '^19.2.0',
             typescript: '^5.7.0',
           }
         : {}),

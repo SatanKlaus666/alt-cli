@@ -3,7 +3,10 @@ id: mcp-overview
 title: MCP Server
 ---
 
-MCP server for AI agents to create TanStack Start projects.
+The TanStack CLI includes a Model Context Protocol (MCP) server that enables AI assistants to:
+- Create TanStack Start projects with integrations
+- Search and fetch TanStack documentation
+- Explore the TanStack ecosystem (partners, libraries)
 
 ## Claude Desktop Setup
 
@@ -20,9 +23,13 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
 }
 ```
 
-Restart Claude Desktop. Then:
+Restart Claude Desktop. Then try:
 
 > "Create a TanStack Start project called 'my-app' with Clerk auth and Drizzle ORM"
+
+Or:
+
+> "How do I use loaders in TanStack Router?"
 
 ## Manual Start
 
@@ -36,9 +43,20 @@ tanstack mcp --sse --port 8080
 
 ## Tools
 
+### Project Creation
+
 | Tool | Description |
 |------|-------------|
-| `listTanStackIntegrations` | Get available integrations |
-| `createTanStackApplication` | Create a project |
+| `listTanStackIntegrations` | Get available integrations for project creation |
+| `createTanStackApplication` | Create a new TanStack Start project |
 
-See [Tools Reference](./tools.md) for parameters and examples.
+### Documentation & Ecosystem
+
+| Tool | Description |
+|------|-------------|
+| `tanstack_list_libraries` | List TanStack libraries with metadata |
+| `tanstack_doc` | Fetch a documentation page by library and path |
+| `tanstack_search_docs` | Search documentation via Algolia |
+| `tanstack_ecosystem` | Browse ecosystem partners by category or library |
+
+See [Tools Reference](./mcp-tools) for parameters and examples.

@@ -5,10 +5,14 @@ import {
   IntegrationInfoSchema,
   ManifestSchema
 } from '../engine/types.js'
+import { fetchWithCache } from '../cache/index.js'
 import type { IntegrationCompiled, IntegrationInfo, Manifest } from '../engine/types.js'
 
 const GITHUB_RAW_BASE =
   'https://raw.githubusercontent.com/TanStack/cli/main/integrations'
+
+// 1 hour cache TTL for remote fetches
+const CACHE_TTL_MS = 60 * 60 * 1000
 
 /**
  * Check if a path is a local directory
@@ -18,7 +22,7 @@ function isLocalPath(path: string): boolean {
 }
 
 /**
- * Fetch the integration manifest from GitHub or local path
+ * Fetch the integration manifest from GitHub or local path (with caching for remote)
  */
 export async function fetchManifest(
   baseUrl: string = GITHUB_RAW_BASE,
@@ -32,19 +36,27 @@ export async function fetchManifest(
     return ManifestSchema.parse(data)
   }
 
-  const url = `${baseUrl}/manifest.json`
-  const response = await fetch(url)
+  const cacheKey = `manifest_${baseUrl.replace(/[^a-zA-Z0-9]/g, '_')}`
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch manifest: ${response.statusText}`)
-  }
+  return fetchWithCache(
+    cacheKey,
+    async () => {
+      const url = `${baseUrl}/manifest.json`
+      const response = await fetch(url)
 
-  const data = await response.json()
-  return ManifestSchema.parse(data)
+      if (!response.ok) {
+        throw new Error(`Failed to fetch manifest: ${response.statusText}`)
+      }
+
+      const data = await response.json()
+      return ManifestSchema.parse(data)
+    },
+    CACHE_TTL_MS,
+  )
 }
 
 /**
- * Fetch integration info.json from GitHub or local path
+ * Fetch integration info.json from GitHub or local path (with caching for remote)
  */
 export async function fetchIntegrationInfo(
   integrationId: string,
@@ -59,15 +71,23 @@ export async function fetchIntegrationInfo(
     return IntegrationInfoSchema.parse(data)
   }
 
-  const url = `${baseUrl}/${integrationId}/info.json`
-  const response = await fetch(url)
+  const cacheKey = `integration_info_${integrationId}_${baseUrl.replace(/[^a-zA-Z0-9]/g, '_')}`
 
-  if (!response.ok) {
-    throw new Error(`Failed to fetch integration ${integrationId}: ${response.statusText}`)
-  }
+  return fetchWithCache(
+    cacheKey,
+    async () => {
+      const url = `${baseUrl}/${integrationId}/info.json`
+      const response = await fetch(url)
 
-  const data = await response.json()
-  return IntegrationInfoSchema.parse(data)
+      if (!response.ok) {
+        throw new Error(`Failed to fetch integration ${integrationId}: ${response.statusText}`)
+      }
+
+      const data = await response.json()
+      return IntegrationInfoSchema.parse(data)
+    },
+    CACHE_TTL_MS,
+  )
 }
 
 /**
@@ -97,7 +117,7 @@ function readDirRecursive(
 }
 
 /**
- * Fetch all files for an integration from GitHub or local path
+ * Fetch all files for an integration from GitHub or local path (with caching for remote)
  */
 export async function fetchIntegrationFiles(
   integrationId: string,
@@ -108,31 +128,39 @@ export async function fetchIntegrationFiles(
     return readDirRecursive(assetsPath)
   }
 
-  // First fetch the file list (we'll need a files.json or similar)
-  const filesUrl = `${baseUrl}/${integrationId}/files.json`
-  const response = await fetch(filesUrl)
+  const cacheKey = `integration_files_${integrationId}_${baseUrl.replace(/[^a-zA-Z0-9]/g, '_')}`
 
-  if (!response.ok) {
-    // No files.json, return empty
-    return {}
-  }
+  return fetchWithCache(
+    cacheKey,
+    async () => {
+      // First fetch the file list (we'll need a files.json or similar)
+      const filesUrl = `${baseUrl}/${integrationId}/files.json`
+      const response = await fetch(filesUrl)
 
-  const fileList: Array<string> = await response.json()
-  const files: Record<string, string> = {}
-
-  // Fetch each file
-  await Promise.all(
-    fileList.map(async (filePath) => {
-      const fileUrl = `${baseUrl}/${integrationId}/assets/${filePath}`
-      const fileResponse = await fetch(fileUrl)
-
-      if (fileResponse.ok) {
-        files[filePath] = await fileResponse.text()
+      if (!response.ok) {
+        // No files.json, return empty
+        return {}
       }
-    }),
-  )
 
-  return files
+      const fileList: Array<string> = await response.json()
+      const files: Record<string, string> = {}
+
+      // Fetch each file
+      await Promise.all(
+        fileList.map(async (filePath) => {
+          const fileUrl = `${baseUrl}/${integrationId}/assets/${filePath}`
+          const fileResponse = await fetch(fileUrl)
+
+          if (fileResponse.ok) {
+            files[filePath] = await fileResponse.text()
+          }
+        }),
+      )
+
+      return files
+    },
+    CACHE_TTL_MS,
+  )
 }
 
 /**

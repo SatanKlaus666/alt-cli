@@ -61,7 +61,11 @@
           "to": "mcp/overview"
         },
         {
-          "label": "Available Tools",
+          "label": "Connecting",
+          "to": "mcp/connecting"
+        },
+        {
+          "label": "Tools Reference",
           "to": "mcp/tools"
         }
       ]

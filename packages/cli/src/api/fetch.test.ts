@@ -1,11 +1,11 @@
 import { resolve } from 'node:path'
 import { describe, expect, it } from 'vitest'
 import {
-  fetchManifest,
   fetchIntegration,
-  fetchIntegrations,
-  fetchIntegrationInfo,
   fetchIntegrationFiles,
+  fetchIntegrationInfo,
+  fetchIntegrations,
+  fetchManifest,
 } from './fetch.js'
 
 const INTEGRATIONS_PATH = resolve(__dirname, '../../../../integrations')

@@ -2,7 +2,7 @@ import { resolve } from 'node:path'
 import { beforeAll, describe, expect, it } from 'vitest'
 import { fetchIntegration, fetchIntegrations } from '../api/fetch.js'
 import { compile } from './compile.js'
-import type { IntegrationCompiled, CompileOptions } from './types.js'
+import type { CompileOptions, IntegrationCompiled } from './types.js'
 
 const INTEGRATIONS_PATH = resolve(__dirname, '../../../../integrations')
 
@@ -214,16 +214,16 @@ describe('compile with real integrations', () => {
     })
   })
 
-  describe('Deployment integration (Vercel)', () => {
-    let vercelIntegration: IntegrationCompiled
+  describe('Deployment integration (Railway)', () => {
+    let railwayIntegration: IntegrationCompiled
 
     beforeAll(async () => {
-      vercelIntegration = await fetchIntegration('vercel', INTEGRATIONS_PATH)
+      railwayIntegration = await fetchIntegration('railway', INTEGRATIONS_PATH)
     })
 
-    it('should load vercel integration', () => {
-      expect(vercelIntegration.id).toBe('vercel')
-      expect(vercelIntegration.type).toBe('deployment')
+    it('should load railway integration', () => {
+      expect(railwayIntegration.id).toBe('railway')
+      expect(railwayIntegration.type).toBe('deployment')
     })
   })
 })

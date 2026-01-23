@@ -32,7 +32,7 @@ describe('MCP server tools logic', () => {
           description: integration.description,
           category: integration.category,
           dependsOn: integration.dependsOn,
-          conflicts: integration.conflicts,
+          exclusive: integration.exclusive,
           hasOptions: integration.hasOptions,
         }))
 
@@ -44,7 +44,7 @@ describe('MCP server tools logic', () => {
       expect(query!.category).toBe('tanstack')
     })
 
-    it('should include dependency and conflict info', async () => {
+    it('should include dependency and exclusive type info', async () => {
       const manifest = await fetchManifest(INTEGRATIONS_PATH)
       const integrations = manifest.integrations.filter((a) =>
         a.modes.includes('file-router'),
@@ -54,7 +54,7 @@ describe('MCP server tools logic', () => {
       expect(trpc?.dependsOn).toContain('tanstack-query')
 
       const clerk = integrations.find((i) => i.id === 'clerk')
-      expect(clerk?.conflicts).toContain('better-auth')
+      expect(clerk?.exclusive).toContain('auth')
     })
   })
 

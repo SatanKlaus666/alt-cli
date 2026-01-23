@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "rm -rf node_modules/.cache && npm run build"
+nixpacksConfigPath = "nixpacks.toml"
+
+[deploy]
+startCommand = "npm run start"
+healthcheckPath = "/"
+healthcheckTimeout = 100

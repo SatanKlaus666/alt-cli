@@ -5,6 +5,7 @@ import express from 'express'
 import { z } from 'zod'
 import { fetchIntegrations, fetchManifest } from '../api/fetch.js'
 import { compile } from '../engine/compile.js'
+import { registerDocTools } from '../mcp/tools.js'
 import type { RouterMode } from '../engine/types.js'
 
 interface McpOptions {
@@ -33,7 +34,7 @@ function createServer() {
             description: integration.description,
             category: integration.category,
             dependsOn: integration.dependsOn,
-            conflicts: integration.conflicts,
+            exclusive: integration.exclusive,
             hasOptions: integration.hasOptions,
           }))
 
@@ -57,6 +58,9 @@ function createServer() {
       }
     },
   )
+
+  // Register documentation/ecosystem tools
+  registerDocTools(server)
 
   server.tool(
     'createTanStackApplication',

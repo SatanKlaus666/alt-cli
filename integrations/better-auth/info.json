@@ -9,7 +9,7 @@
   "link": "https://www.better-auth.com",
 
   "dependsOn": [],
-  "conflicts": ["clerk", "workos"],
+  "exclusive": ["auth"],
 
   "routes": [
     {

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { compile, compileWithAttribution } from './compile.js'
-import type { IntegrationCompiled, CompileOptions, CustomTemplateCompiled } from './types.js'
+import type { CompileOptions, CustomTemplateCompiled, IntegrationCompiled } from './types.js'
 
 const baseOptions: CompileOptions = {
   projectName: 'test-project',

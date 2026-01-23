@@ -10,7 +10,7 @@
   "partnerId": "cloudflare",
 
   "dependsOn": [],
-  "conflicts": ["netlify", "vercel", "nitro"],
+  "exclusive": ["deploy"],
 
   "hooks": [
     {

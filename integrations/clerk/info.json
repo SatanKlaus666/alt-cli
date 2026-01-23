@@ -10,7 +10,7 @@
   "partnerId": "clerk",
 
   "dependsOn": [],
-  "conflicts": ["better-auth", "workos"],
+  "exclusive": ["auth"],
 
   "routes": [
     {

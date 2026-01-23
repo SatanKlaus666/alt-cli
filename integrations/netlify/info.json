@@ -10,7 +10,7 @@
   "partnerId": "netlify",
 
   "dependsOn": [],
-  "conflicts": ["vercel", "cloudflare"],
+  "exclusive": ["deploy"],
 
   "routes": [],
 

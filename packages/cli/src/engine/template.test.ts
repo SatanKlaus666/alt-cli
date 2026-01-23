@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
-  relativePath,
   createTemplateContext,
   processTemplateFile,
+  relativePath,
 } from './template.js'
 import type { CompileOptions } from './types.js'
 

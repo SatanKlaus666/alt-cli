@@ -841,6 +841,11 @@ ${packageManager}${packageManager === 'npm' ? ' run' : ''} dev
 - [TanStack Router Documentation](https://tanstack.com/router)
 `
 
+  // .nvmrc - Node version (TanStack Start requires 22.12.0+)
+  // Using Node 22 LTS - Node 23.2.0+ has a Vite CSS bug
+  // See: https://github.com/shadcn-ui/ui/issues/7182
+  files['.nvmrc'] = '22'
+
   return files
 }
 

@@ -9,7 +9,7 @@
   "link": "https://eslint.org",
 
   "dependsOn": [],
-  "conflicts": ["biome"],
+  "exclusive": ["linter"],
 
   "hooks": []
 }

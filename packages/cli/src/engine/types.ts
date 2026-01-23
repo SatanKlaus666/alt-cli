@@ -156,9 +156,11 @@ export const IntegrationInfoSchema = z.object({
   requiresTailwind: z.boolean().optional(),
   demoRequiresTailwind: z.boolean().optional(),
 
-  // Dependencies & conflicts
+  // Dependencies
   dependsOn: z.array(z.string()).optional(),
-  conflicts: z.array(z.string()).optional(),
+  // Exclusive types - only one integration per exclusive type can be selected
+  // e.g., exclusive: ['deploy'] means only one deploy integration at a time
+  exclusive: z.array(z.string()).optional(),
 
   // Partner integration
   partnerId: z.string().optional(),
@@ -250,7 +252,8 @@ export const ManifestIntegrationSchema = z.object({
   category: CategorySchema.optional(),
   modes: z.array(RouterModeSchema),
   dependsOn: z.array(z.string()).optional(),
-  conflicts: z.array(z.string()).optional(),
+  // Exclusive types - only one integration per exclusive type can be selected
+  exclusive: z.array(z.string()).optional(),
   partnerId: z.string().optional(),
   hasOptions: z.boolean().optional(),
   link: z.string().optional(),
@@ -269,7 +272,6 @@ export const ManifestCustomTemplateSchema = z.object({
   icon: z.string().optional(),
   features: z.array(z.string()).optional(),
 })
-export type ManifestCustomTemplate = z.infer<typeof ManifestCustomTemplateSchema>
 
 export const ManifestSchema = z.object({
   version: z.string(),

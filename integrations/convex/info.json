@@ -10,7 +10,7 @@
   "partnerId": "convex",
 
   "dependsOn": ["tanstack-query"],
-  "conflicts": ["drizzle", "prisma", "neon"],
+  "exclusive": ["orm", "database-backend"],
 
   "options": {},
 
