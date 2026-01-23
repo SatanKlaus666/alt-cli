@@ -1,8 +1,0 @@
-[phases.setup]
-# Use Node 22 LTS - Node 23.2.0+ has a Vite CSS bug
-# See: https://github.com/shadcn-ui/ui/issues/7182
-nixPkgs = ["nodejs_22", "npm-10_x"]
-
-# Disable SPA/Caddy detection - TanStack Start is SSR
-[phases.caddy]
-cmds = []

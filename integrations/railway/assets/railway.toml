@@ -1,7 +1,5 @@
 [build]
-builder = "nixpacks"
-buildCommand = "rm -rf node_modules/.cache && npm run build"
-nixpacksConfigPath = "nixpacks.toml"
+buildCommand = "npm run build"
 
 [deploy]
 startCommand = "npm run start"
