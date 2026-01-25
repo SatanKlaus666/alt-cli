@@ -163,11 +163,9 @@ export function generateRootRoute(
   const lines: Array<{ text: string; integrationId: string }> = []
   const hasHeader = options.chosenIntegrations.length > 0
 
-  if (devtoolsPlugins.length > 0) {
-    lines.push({ text: `import React from 'react'`, integrationId: 'base' })
-  }
   lines.push({ text: `import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'`, integrationId: 'base' })
-  lines.push({ text: `import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'`, integrationId: 'base' })
+  lines.push({ text: `import { TanStackDevtools } from '@tanstack/react-devtools'`, integrationId: 'base' })
+  lines.push({ text: `import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'`, integrationId: 'base' })
 
   lines.push({ text: `import appCss from '../styles.css?url'`, integrationId: 'base' })
   if (hasHeader) {
@@ -192,16 +190,6 @@ export function generateRootRoute(
       true,
     )
     lines.push({ text: `import { ${devtools.jsName} } from '${importPath}'`, integrationId: devtools.integrationId })
-  }
-
-  // Devtools array
-  if (devtoolsPlugins.length > 0) {
-    lines.push({ text: '', integrationId: 'base' })
-    lines.push({ text: `const devtoolsPlugins = [`, integrationId: 'base' })
-    for (const devtools of devtoolsPlugins) {
-      lines.push({ text: `  ${devtools.jsName},`, integrationId: devtools.integrationId })
-    }
-    lines.push({ text: `]`, integrationId: 'base' })
   }
 
   lines.push({ text: '', integrationId: 'base' })
@@ -237,13 +225,17 @@ export function generateRootRoute(
     lines.push({ text: `${currentIndent}<Header />`, integrationId: 'base' })
   }
   lines.push({ text: `${currentIndent}{children}`, integrationId: 'base' })
-  lines.push({ text: `${currentIndent}<TanStackRouterDevtools />`, integrationId: 'base' })
 
-  if (devtoolsPlugins.length > 0) {
-    lines.push({ text: `${currentIndent}{devtoolsPlugins.map((plugin, i) => (`, integrationId: 'base' })
-    lines.push({ text: `${currentIndent}  <React.Fragment key={i}>{plugin.render}</React.Fragment>`, integrationId: 'base' })
-    lines.push({ text: `${currentIndent}))}`, integrationId: 'base' })
+  // TanStack unified devtools with plugins
+  lines.push({ text: `${currentIndent}<TanStackDevtools`, integrationId: 'base' })
+  lines.push({ text: `${currentIndent}  config={{ position: 'bottom-right' }}`, integrationId: 'base' })
+  lines.push({ text: `${currentIndent}  plugins={[`, integrationId: 'base' })
+  lines.push({ text: `${currentIndent}    { name: 'TanStack Router', render: <TanStackRouterDevtoolsPanel /> },`, integrationId: 'base' })
+  for (const devtools of devtoolsPlugins) {
+    lines.push({ text: `${currentIndent}    ${devtools.jsName},`, integrationId: devtools.integrationId })
   }
+  lines.push({ text: `${currentIndent}  ]}`, integrationId: 'base' })
+  lines.push({ text: `${currentIndent}/>`, integrationId: 'base' })
 
   for (const provider of [...rootProviders].reverse()) {
     currentIndent = currentIndent.slice(0, -2)

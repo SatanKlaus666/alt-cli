@@ -1,4 +1,21 @@
 [
+  "public/example-ukelele-tanstack.jpg",
+  "public/example-guitar-video-games.jpg",
+  "public/example-guitar-superhero.jpg",
+  "public/example-guitar-motherboard.jpg",
+  "public/example-guitar-racing.jpg",
+  "public/example-guitar-steamer-trunk.jpg",
+  "public/example-guitar-traveling.jpg",
+  "public/example-guitar-flowers.jpg",
+  "src/data/guitars.ts",
+  "src/lib/guitar-tools.ts",
+  "src/lib/ai-chat.ts",
+  "src/lib/ai-devtools.tsx",
+  "src/components/GuitarRecommendation.tsx",
+  "src/components/AIAssistant.tsx",
   "src/routes/api/chat.ts",
-  "src/routes/demo/ai.tsx"
+  "src/routes/demo/ai.tsx",
+  "src/routes/demo/ai.css",
+  "src/routes/demo/guitars/index.tsx",
+  "src/routes/demo/guitars/$guitarId.tsx"
 ]

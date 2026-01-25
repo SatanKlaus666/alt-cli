@@ -94,6 +94,7 @@ function createServer() {
       try {
         const { mkdirSync, writeFileSync } = await import('node:fs')
         const { resolve } = await import('node:path')
+        const { BINARY_PREFIX } = await import('../api/fetch.js')
         const { execSync } = await import('node:child_process')
 
         // Fetch integration definitions if needed
@@ -121,7 +122,14 @@ function createServer() {
           const fullPath = resolve(targetDir, filePath)
           const dir = resolve(fullPath, '..')
           mkdirSync(dir, { recursive: true })
-          writeFileSync(fullPath, content, 'utf-8')
+          
+          // Handle binary files (base64 encoded with prefix)
+          if (content.startsWith(BINARY_PREFIX)) {
+            const base64Data = content.slice(BINARY_PREFIX.length)
+            writeFileSync(fullPath, Buffer.from(base64Data, 'base64'))
+          } else {
+            writeFileSync(fullPath, content, 'utf-8')
+          }
         }
 
         // Initialize git

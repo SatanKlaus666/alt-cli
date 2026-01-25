@@ -1,5 +1,5 @@
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs'
-import { join } from 'node:path'
+import { extname, join } from 'node:path'
 import {
   IntegrationCompiledSchema,
   IntegrationInfoSchema,
@@ -13,6 +13,24 @@ const GITHUB_RAW_BASE =
 
 // 1 hour cache TTL for remote fetches
 const CACHE_TTL_MS = 60 * 60 * 1000
+
+// Binary file extensions that should be read as base64
+const BINARY_EXTENSIONS = new Set([
+  '.png', '.jpg', '.jpeg', '.gif', '.webp', '.ico', '.svg',
+  '.woff', '.woff2', '.ttf', '.eot', '.otf',
+  '.pdf', '.zip', '.tar', '.gz',
+  '.mp3', '.mp4', '.wav', '.ogg', '.webm',
+])
+
+// Prefix for base64-encoded binary files
+export const BINARY_PREFIX = 'base64:'
+
+/**
+ * Check if a file should be treated as binary based on extension
+ */
+function isBinaryFile(filePath: string): boolean {
+  return BINARY_EXTENSIONS.has(extname(filePath).toLowerCase())
+}
 
 /**
  * Check if a path is a local directory
@@ -92,6 +110,7 @@ export async function fetchIntegrationInfo(
 
 /**
  * Recursively read all files from a directory
+ * Binary files are read as base64 with a prefix marker
  */
 function readDirRecursive(
   dir: string,
@@ -108,6 +127,10 @@ function readDirRecursive(
 
     if (stat.isDirectory()) {
       Object.assign(files, readDirRecursive(fullPath, relativePath))
+    } else if (isBinaryFile(relativePath)) {
+      // Read binary files as base64 with prefix
+      const buffer = readFileSync(fullPath)
+      files[relativePath] = BINARY_PREFIX + buffer.toString('base64')
     } else {
       files[relativePath] = readFileSync(fullPath, 'utf-8')
     }
@@ -152,7 +175,13 @@ export async function fetchIntegrationFiles(
           const fileResponse = await fetch(fileUrl)
 
           if (fileResponse.ok) {
-            files[filePath] = await fileResponse.text()
+            if (isBinaryFile(filePath)) {
+              // Fetch binary files as arrayBuffer and convert to base64
+              const buffer = await fileResponse.arrayBuffer()
+              files[filePath] = BINARY_PREFIX + Buffer.from(buffer).toString('base64')
+            } else {
+              files[filePath] = await fileResponse.text()
+            }
           }
         }),
       )

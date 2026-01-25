@@ -1,6 +1,6 @@
 {
   "name": "@tanstack/cli",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "TanStack CLI for scaffolding and tooling",
   "author": "Tanner Linsley",
   "license": "MIT",

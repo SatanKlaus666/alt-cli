@@ -1,14 +1,14 @@
 {
   "name": "TanStack AI",
-  "description": "Build AI-powered chat and completion features with TanStack AI",
+  "description": "Build AI-powered chat with tool calling using TanStack AI. Includes a guitar store demo with streaming responses, agent loops, and AI devtools.",
   "type": "integration",
   "phase": "integration",
   "category": "tanstack",
-  "modes": ["file-router", "code-router"],
+  "modes": ["file-router"],
   "priority": 20,
   "link": "https://tanstack.com/ai",
 
-  "dependsOn": [],
+  "dependsOn": ["start", "tanstack-store"],
   "conflicts": [],
 
   "routes": [
@@ -18,10 +18,32 @@
       "icon": "Bot",
       "path": "src/routes/demo/ai.tsx",
       "jsName": "AiDemo"
+    },
+    {
+      "url": "/demo/guitars",
+      "name": "Guitars",
+      "icon": "Guitar",
+      "path": "src/routes/demo/guitars/index.tsx",
+      "jsName": "GuitarsIndex"
+    },
+    {
+      "path": "src/routes/demo/guitars/$guitarId.tsx",
+      "jsName": "GuitarDetail"
     }
   ],
 
-  "hooks": [],
+  "hooks": [
+    {
+      "type": "header-user",
+      "path": "src/components/AIAssistant.tsx",
+      "jsName": "AIAssistant"
+    },
+    {
+      "type": "devtools",
+      "path": "src/lib/ai-devtools.tsx",
+      "jsName": "AiDevtools"
+    }
+  ],
 
   "envVars": [
     {

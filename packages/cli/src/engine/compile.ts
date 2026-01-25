@@ -129,6 +129,7 @@ function buildPackageJson(
     dependencies: {
       '@tanstack/react-router': '^1.132.0',
       '@tanstack/react-router-devtools': '^1.132.0',
+      '@tanstack/react-devtools': '^0.9.2',
       '@tanstack/react-start': '^1.132.0',
       react: '^19.2.0',
       'react-dom': '^19.2.0',
@@ -245,6 +246,23 @@ export function compile(options: CompileOptions): CompileOutput {
     seenEnvVars.add(v.name)
     return true
   })
+
+  // Generate .env.example with integration env vars
+  if (uniqueEnvVars.length > 0) {
+    const envLines: Array<string> = [
+      '# Environment Variables',
+      '# Copy this file to .env.local and fill in your values',
+      '',
+    ]
+
+    for (const v of uniqueEnvVars) {
+      envLines.push(`# ${v.description}${v.required ? ' (required)' : ''}`)
+      envLines.push(`${v.name}=${v.example || ''}`)
+      envLines.push('')
+    }
+
+    outputFiles['.env.example'] = envLines.join('\n')
+  }
 
   return {
     files: outputFiles,

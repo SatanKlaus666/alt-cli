@@ -14,7 +14,7 @@ import {
   text,
 } from '@clack/prompts'
 import chalk from 'chalk'
-import { fetchIntegrations, fetchManifest } from '../api/fetch.js'
+import { BINARY_PREFIX, fetchIntegrations, fetchManifest } from '../api/fetch.js'
 import { compile } from '../engine/compile.js'
 import { writeConfigFile } from '../engine/config-file.js'
 import { loadTemplate } from '../engine/custom-addons/template.js'
@@ -383,7 +383,14 @@ export async function runCreate(
     const fullPath = resolve(targetDir, filePath)
     const dir = resolve(fullPath, '..')
     mkdirSync(dir, { recursive: true })
-    writeFileSync(fullPath, content, 'utf-8')
+    
+    // Handle binary files (base64 encoded with prefix)
+    if (content.startsWith(BINARY_PREFIX)) {
+      const base64Data = content.slice(BINARY_PREFIX.length)
+      writeFileSync(fullPath, Buffer.from(base64Data, 'base64'))
+    } else {
+      writeFileSync(fullPath, content, 'utf-8')
+    }
   }
 
   // Write config file for integration/template creation
