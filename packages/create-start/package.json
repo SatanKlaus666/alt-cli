@@ -1,6 +1,6 @@
 {
   "name": "@tanstack/create-start",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Create TanStack Start applications",
   "author": "Tanner Linsley",
   "license": "MIT",
